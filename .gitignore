@@ -1,3 +1,4 @@
 # Ignore config file for local VSCode
 .vscode
 settings.json
+__pycache__
