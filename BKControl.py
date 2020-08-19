@@ -18,24 +18,22 @@ class bkcontrol:
             self.driver_path = '/usr/local/bin/chromedriver'
             self.driver = webdriver.Chrome(options = self.options,executable_path = self.driver_path)
         elif system() == 'Windows':
-            self.driver = webdriver.Chrome('C:/Program Files (x86)/Chromdriver')
+            self.driver = webdriver.Chrome(executable_path=r'C:/Users/adamd/Apps/Chromdriver/chromedriver.exe')
 
-    def BookSearch(self, aBook):
+    def BookSearch(self, aBook, aRefs):
         self.driver.find_element_by_id('search')\
             .send_keys(aBook)
         sleep(2)
         self.driver.find_element_by_id('search-btn')\
             .click()
         sleep(2)
-        self.driver.find_element_by_xpath("//a[contains(@href, '/studijni-predpoklady-a-zaklady-logiky')]")\
+        self.driver.find_element_by_xpath("//a[contains(@href, '/{}')]".format(aRefs))\
             .click()
-        self.BookStock() # Later move to dedicaded function for cunting books
-
-        # self.driver.find_element_by_xpath("//a[contains(@href, '/studijni-predpoklady-a-zaklady-logiky-1-dil')]")\
-        #     .click()
-        # self.driver.find_element_by_xpath("//a[contains(@class, 'label')]")
-        # iSkladem = self.driver.__getattribute__()
-        # print(iSkladem)
+        sleep(2)
+        iStock = self.BookStock()
+        sleep(2)
+        print(iStock) # Later move to dedicaded function for cunting books
+        return iStock
 
     def BookStock(self):
         iBook = self.driver.find_element_by_xpath('//*[@id="snippet-bookDetail-availabilityInfo"]/div/div[1]/ul/li[1]/a/span[2]')
@@ -44,9 +42,18 @@ class bkcontrol:
         else:
             return False
 
-    def BookCount(self, aBooks):
-        for i in aBooks:
-            self.BookSearch(aBooks[i])
+    def BookCount(self, aBooks, aRefs):
+        iBookstock = []
+        for i in range(len(aBooks)):
+            iStock = self.BookSearch(aBooks[i], aRefs[i])
+            sleep(1)
+            if not iStock:
+                iBookstock = [aBooks[i]]
+            self.driver.find_element_by_xpath('/html/body/div[2]/header/div/p/a')\
+                .click()
+            sleep(1)
+        print(iBookstock)
+        return iBookstock
 
     def WebPage(self, aWebPage):
         # Reduce size of the window for complete program

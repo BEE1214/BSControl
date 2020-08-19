@@ -11,11 +11,9 @@ from data.bookstores import bookstores
 def main():
     bot = bkcontrol()
     bot.WebPage(bookstores.iBookstores['Dobrovsky'])
-    bot.BookSearch(books.iBooks[0])
-
-    pass
+    # bot.BookSearch(books.iBooks[0])
+    bot.BookCount(books.iBooks, books.iRefs)
 
 if __name__ == '__main__':
     # Source code
     main()
-    pass

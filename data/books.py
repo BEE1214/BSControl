@@ -15,3 +15,16 @@ class books:
         'Studijní předpoklady a základy logiky 1. díl',
         'Studijní předpoklady a základy logiky 2. díl'
     ]
+
+    iRefs = [
+        'studijni-predpoklady-a-zaklady-logiky-1-dil',
+        'testy-obecnych-studijnich-predpokladu-a-zaklady-logiky-2-dil'
+    ]
+
+
+class bookstores:
+    iBookstores = {
+        'Dobrovsky' : 'https://www.knihydobrovsky.cz/',
+        'Kosmas' : 'https://www.kosmas.cz/',
+
+    }
