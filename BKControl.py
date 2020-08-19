@@ -10,7 +10,7 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.keys import Keys
 from time import sleep
 
-class bkcontrol:
+class controldobrovsky:
     def __init__(self):
         if system() == 'Linux':
             self.options = Options()
@@ -57,7 +57,8 @@ class bkcontrol:
 
     def WebPage(self, aWebPage):
         # Reduce size of the window for complete program
-        # self.driver.set_window_size(500, 500)
+        # self.driver.set_window_size(100, 100)
+        self.driver.set_window_size(1080, 800)
         self.driver.get(aWebPage)
         sleep(2)
 
