@@ -4,6 +4,7 @@
 ##=-Date:             2020-08-17 -=##
 ##=================================##
 
+from platform import system
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.keys import Keys
@@ -11,11 +12,13 @@ from time import sleep
 
 class bkcontrol:
     def __init__(self):
-        self.options = Options()
-        self.options.binary_location = '/usr/bin/brave'
-        self.driver_path = '/usr/local/bin/chromedriver'
-        self.driver = webdriver.Chrome(options = self.options,executable_path = self.driver_path, args='--headless')
-        pass
+        if system() == 'Linux':
+            self.options = Options()
+            self.options.binary_location = '/usr/bin/brave'
+            self.driver_path = '/usr/local/bin/chromedriver'
+            self.driver = webdriver.Chrome(options = self.options,executable_path = self.driver_path)
+        elif system() == 'Windows':
+            self.driver = webdriver.Chrome('C:/Program Files (x86)/Chromdriver')
 
     def BookSearch(self, aBook):
         self.driver.find_element_by_id('search')\
@@ -24,9 +27,9 @@ class bkcontrol:
         self.driver.find_element_by_id('search-btn')\
             .click()
         sleep(2)
-        iBook = self.driver.find_element_by_xpath("//a[contains(@href, '/studijni-predpoklady-a-zaklady-logiky')]")\
+        self.driver.find_element_by_xpath("//a[contains(@href, '/studijni-predpoklady-a-zaklady-logiky')]")\
             .click()
-        iStock = self.BookStock() # Later move to dedicaded function for cunting books
+        self.BookStock() # Later move to dedicaded function for cunting books
 
         # self.driver.find_element_by_xpath("//a[contains(@href, '/studijni-predpoklady-a-zaklady-logiky-1-dil')]")\
         #     .click()
@@ -43,7 +46,7 @@ class bkcontrol:
 
     def BookCount(self, aBooks):
         for i in aBooks:
-            BookSearch(aBooks[i])
+            self.BookSearch(aBooks[i])
 
     def WebPage(self, aWebPage):
         # Reduce size of the window for complete program
