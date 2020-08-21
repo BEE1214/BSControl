@@ -13,11 +13,14 @@ def main():
     iTemp = []
     bot = bscontrol()
     bot.WebPage(bookstores.iBookstores['Dobrovsky'])
-    iTemp = bot.BookSearch(books.iBooks, books.iRefs)
-    print(iTemp)
-    # iStockBooks = bot.BookCount(books.iBooks, books.iRefs)
-    # tofile = tologfile(iStockBooks)
-    # tofile.tofile()
+    iTemp = bot.DobrSearch(books.iBooks)
+    # iTemp = bot.DobrSearch(books.iBooks, books.iRefs)
+    iStock = bot.DobrStock(books.iBooks, iTemp)
+    # iStock = bot.DobrStock(books.iBooks, iTemp)
+    # for i in range(len(iStock)):
+    #     if(iStock[i].find('neni skladem'))
+    #         print(iStock[i])
+    #     pass
 
 if __name__ == '__main__':
     # Source code

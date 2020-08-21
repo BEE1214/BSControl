@@ -23,44 +23,77 @@ class bscontrol:
             self.driver_path = r'C:/Users/adamd/Apps/Chromdriver/chromedriver.exe'
             self.driver = webdriver.Chrome(executable_path=self.driver_path)
 
-    def BookSearch(self, aBook, aRefs):
+    def DobrSearch(self, aBooks):
+        """ 
+        Works only for dobrovsky knihy
+        Searches for information about aBooks on current web page.
+
+        args:
+            - aBooks - list of books
+        Returns:
+            - iFind - list of founded informations
+        """
         iLBook = -1
         iWCount = 1
         # iFind[len(aBook)]
         iFind = []
 
-        for i in range(len(aBook)):
+        for i in range(len(aBooks)):
             self.driver.find_element_by_id('search')\
-                .send_keys(aBook[i])
-            sleep(2)
+                .send_keys(aBooks[i])
+            sleep(3)
             self.driver.find_element_by_id('search-btn')\
                 .click()
-            sleep(2)
+            sleep(3)
             while (iLBook == -1):
                 iTemp = self.driver.find_element_by_xpath('//*[@id="js-response-products"]/div/ul/li[{}]'.format(iWCount))
                 # iTemp = self.driver.find_element_by_xpath("//li[contains(@data-productinfo, 'name')]")
                 if iWCount < 2:
                     iFind.append(iTemp.get_attribute('data-productinfo'))
+                elif(iWCount == 5):
+                    pass
                 else:
                     iFind[i] = iTemp.get_attribute('data-productinfo')
-                iLBook = iFind[i].find(aBook[i])
-                print(iLBook)
+                iLBook = iFind[i].find(aBooks[i])
+                # print(iLBook)
                 iWCount += 1
                 pass
             iLBook = -1
             iWCount = 1
             # if ((iFounded = iFind.find('Skladem')) != -1):
-
+        pass
             
-        # print(iFounded)
-        # self.driver.find_element_by_xpath("//a[contains(@href, '/{}')]".format(aRefs))\
-        #     .click()
-        # sleep(2)
-        # iStock = self.BookStock()
-        # sleep(2)
-        # print(iStock) # Later move to dedicaded function for cunting books
-        # return iStock
         return iFind
+
+    def KosSearch(self, aBooks):
+        iLBook = -1
+        iWCount = 1
+        iFind = []
+
+        for i in range(len(aBooks)):
+            self.driver.find_element_by_id('searchInput')\
+                .send_keys(aBooks[i])
+            sleep(2)
+            self.driver.find_elements_by_id('searchButton')\
+                .click()
+            sleep(2)
+            
+            pass
+        pass
+    def DobrStock(self, aBook, aBookinfo):
+        iStock = []
+        iBook = aBook
+        iBookinfo = aBookinfo
+
+        for i in range(len(iBookinfo)):
+            if ((iBookinfo[i].find('Skladem') != -1) and (iBookinfo[i].find('Skladem (vybrané prodejny)') == -1) and (iBookinfo[i].find('Skladem u') == -1)):
+                iStock.append(f'{iBook[i]} - skladem')
+            elif(iBookinfo[i].find('Skladem (vybrané prodejny)') != -1):
+                iStock.append(f'{iBook[i]} - neni skladem')
+            else:
+                iStock.append(f'{iBook[i]} - neni skladem')
+
+        return iStock
 
     def BookStock(self):
         iBook = self.driver.find_element_by_xpath('//*[@id="snippet-bookDetail-availabilityInfo"]/div/div[1]/ul/li[1]/a/span[2]')
@@ -72,7 +105,7 @@ class bscontrol:
     def BookCount(self, aBooks, aRefs):
         iBookstock = []
         for i in range(len(aBooks)):
-            iStock = self.BookSearch(aBooks[i], aRefs[i])
+            iStock = self.DobrSearch(aBooks[i], aRefs[i])
             sleep(1)
             if (not iStock):
                 iBookstock = [aBooks[i]]
