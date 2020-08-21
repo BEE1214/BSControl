@@ -12,10 +12,12 @@ from data.bookstores import bookstores
 def main():
     iTemp = []
     bot = bscontrol()
-    bot.WebPage(bookstores.iBookstores['Dobrovsky'])
-    iTemp = bot.DobrSearch(books.iBooks)
+    bot.WebPage(bookstores.iBookstores['Kosmas'])
+    # bot.WebPage(bookstores.iBookstores['Dobrovsky'])
+    iTemp = bot.KosSearch(books.iBooks, books.iRefs)
+    print(iTemp)
     # iTemp = bot.DobrSearch(books.iBooks, books.iRefs)
-    iStock = bot.DobrStock(books.iBooks, iTemp)
+    # iStock = bot.KosStock(books.iBooks, iTemp)
     # iStock = bot.DobrStock(books.iBooks, iTemp)
     # for i in range(len(iStock)):
     #     if(iStock[i].find('neni skladem'))

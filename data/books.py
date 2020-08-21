@@ -28,8 +28,8 @@ class books:
     ]
 
     iRefs = [
-        'studijni-predpoklady-a-zaklady-logiky-1-dil',
-        'testy-obecnych-studijnich-predpokladu-a-zaklady-logiky-2-dil',
+        'studijni-predpoklady-a-zaklady-logiky-1.-dil',
+        'studijni-predpoklady-a-zaklady-logiky-2.-dil',
         'chcete-se-dostat-na-lekarskou-fakultu-biologie-2-dil-3-vydani'
     ]
 

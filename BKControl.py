@@ -65,7 +65,7 @@ class bscontrol:
             
         return iFind
 
-    def KosSearch(self, aBooks):
+    def KosSearch(self, aBooks, aRefs):
         iLBook = -1
         iWCount = 1
         iFind = []
@@ -73,13 +73,20 @@ class bscontrol:
         for i in range(len(aBooks)):
             self.driver.find_element_by_id('searchInput')\
                 .send_keys(aBooks[i])
-            sleep(2)
-            self.driver.find_elements_by_id('searchButton')\
+            sleep(3)
+            self.driver.find_element_by_id('searchButton')\
                 .click()
             sleep(2)
-            
-            pass
+            self.driver.find_element_by_xpath("//a[contains(@href, '/{}')]".format(aRefs[i]))\
+                .click()
+            iTemp = self.driver.find_element_by_xpath("//i[contains(@class, 'tip__wrap--top tip__wrap--on-click green')]")
+            iText = iTemp.text
+            print(iText)
+                # print(f'{aBooks[i]} - skladem')
         pass
+        
+        return iFind
+
     def DobrStock(self, aBook, aBookinfo):
         iStock = []
         iBook = aBook
@@ -105,7 +112,7 @@ class bscontrol:
     def BookCount(self, aBooks, aRefs):
         iBookstock = []
         for i in range(len(aBooks)):
-            iStock = self.DobrSearch(aBooks[i], aRefs[i])
+            iStock = self.DobrSearch(aBooks[i])
             sleep(1)
             if (not iStock):
                 iBookstock = [aBooks[i]]
