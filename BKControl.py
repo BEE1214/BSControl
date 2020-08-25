@@ -25,7 +25,7 @@ class bscontrol:
 
     def DobrSearch(self, aBooks):
         """ 
-        Works only for dobrovsky knihy
+        Search on dobrovskyknihy.cz
         Searches for information about aBooks on current web page.
 
         args:
@@ -66,26 +66,45 @@ class bscontrol:
         return iFind
 
     def KosSearch(self, aBooks, aRefs):
-        iLBook = -1
-        iWCount = 1
+        """ 
+        Search on kosmas.cz
+        Searches for information about aBooks on current web page.
+
+        args:
+            - aBooks - list of books
+            - aRefs - list modified for href
+        Returns:
+            - iFind - list of founded informations
+        """
+
+        # iLBook = -1
+        # iWCount = 1
         iFind = []
 
         for i in range(len(aBooks)):
             self.driver.find_element_by_id('searchInput')\
                 .send_keys(aBooks[i])
-            sleep(3)
+            # sleep(3)
             self.driver.find_element_by_id('searchButton')\
                 .click()
-            sleep(2)
+            # sleep(2)
             self.driver.find_element_by_xpath("//a[contains(@href, '/{}')]".format(aRefs[i]))\
                 .click()
-            iTemp = self.driver.find_element_by_xpath("//i[contains(@class, 'tip__wrap--top tip__wrap--on-click green')]")
+            iTemp = self.driver.find_element_by_xpath("//td[contains(@class, 'availability')]")
             iText = iTemp.text
-            print(iText)
+            # print(iText)
+            iFind.append(f'{aBooks[i]} - {iText}')
                 # print(f'{aBooks[i]} - skladem')
         pass
         
         return iFind
+
+    def KosStock(self, aStock):
+        for i in range(len(aStock)):
+            if aStock[i].find('Skladem') == -1 :
+                print(aStock[i])
+            pass
+        pass
 
     def DobrStock(self, aBook, aBookinfo):
         iStock = []

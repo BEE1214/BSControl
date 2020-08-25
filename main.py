@@ -10,19 +10,21 @@ from data.books import books
 from data.bookstores import bookstores
 
 def main():
-    iTemp = []
     bot = bscontrol()
     bot.WebPage(bookstores.iBookstores['Kosmas'])
-    # bot.WebPage(bookstores.iBookstores['Dobrovsky'])
-    iTemp = bot.KosSearch(books.iBooks, books.iRefs)
-    print(iTemp)
-    # iTemp = bot.DobrSearch(books.iBooks, books.iRefs)
+    iKosmas = bot.KosSearch(books.iBooksKos, books.iRefsKos)
+    print('----------Kosmas----------')
+    bot.KosStock(iKosmas)
+
+    bot.WebPage(bookstores.iBookstores['Dobrovsky'])
+    iDobrovsky = bot.DobrSearch(books.iBooksDobr)
+    print('----------Dobrovsky----------')
     # iStock = bot.KosStock(books.iBooks, iTemp)
-    # iStock = bot.DobrStock(books.iBooks, iTemp)
-    # for i in range(len(iStock)):
-    #     if(iStock[i].find('neni skladem'))
-    #         print(iStock[i])
-    #     pass
+    iStock = bot.DobrStock(books.iBooksDobr, iDobrovsky)
+    for i in range(len(iStock)):
+        if(iStock[i].find('neni skladem')):
+            print(iStock[i])
+        pass
 
 if __name__ == '__main__':
     # Source code
