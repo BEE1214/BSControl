@@ -65,6 +65,67 @@ class bscontrol:
             
         return iFind
 
+    def DobrStock(self, aBook, aBookinfo):
+        """ 
+        arg:
+            - aFind - list of books with their availability
+            - aBooks - list of books
+        return:
+            - iStock - list of books that are in stock
+        """
+
+        iStock = []
+        iBook = aBook
+        iBookinfo = aBookinfo
+
+        for i in range(len(iBookinfo)):
+            if ((iBookinfo[i].find('Skladem') != -1) and (iBookinfo[i].find('Skladem (vybrané prodejny)') == -1) and (iBookinfo[i].find('Skladem u') == -1)):
+                iStock.append(f'{iBook[i]} - skladem')
+            elif(iBookinfo[i].find('Skladem (vybrané prodejny)') != -1):
+                iStock.append(f'{iBook[i]} - neni skladem')
+            else:
+                iStock.append(f'{iBook[i]} - neni skladem')
+
+        return iStock
+
+    def LuxSearch(self, aBooks, aRefs):
+        """ 
+        Search on luxor.cz
+        Searches for information about aBooks on current web page.
+
+        args:
+            - aBooks - list of books
+            - aRefs - list modified for href
+        Returns:
+            - iFind - list of founded informations
+        """
+
+        iFind = []
+
+        for i in range(len(aBooks)):
+            self.WebPage(aRefs[aBooks[i]])
+            iText = self.driver.find_element_by_xpath('//div[contains(@class, "f1ubm3q7")]').text
+            iFind.append(f'{iText}')
+        pass
+        
+        return iFind
+
+    def LuxStock(self, aFind, aBooks):
+        """ 
+        arg:
+            - aFind - list of books with their availability
+            - aBooks - list of books
+        return:
+            - iStock - list of books that are in stock
+        """
+        iStock = ['Luxor']
+        for i in range(len(aBooks)):
+            if (aFind[i].find('NENÍ SKLADEM') != -1):
+                iStock.append(f'{aBooks[i]} - neni skladem')
+                pass
+        
+        return iStock
+
     def KosSearch(self, aBooks, aRefs):
         """ 
         Search on kosmas.cz
@@ -100,52 +161,40 @@ class bscontrol:
         return iFind
 
     def KosStock(self, aStock):
+        """ 
+        arg:
+            - aFind - list of books with their availability
+            - aBooks - list of books
+        return:
+            - iStock - list of books that are in stock
+        """
+
         for i in range(len(aStock)):
             if aStock[i].find('Skladem') == -1 :
                 print(aStock[i])
             pass
         pass
 
-    def DobrStock(self, aBook, aBookinfo):
-        iStock = []
-        iBook = aBook
-        iBookinfo = aBookinfo
-
-        for i in range(len(iBookinfo)):
-            if ((iBookinfo[i].find('Skladem') != -1) and (iBookinfo[i].find('Skladem (vybrané prodejny)') == -1) and (iBookinfo[i].find('Skladem u') == -1)):
-                iStock.append(f'{iBook[i]} - skladem')
-            elif(iBookinfo[i].find('Skladem (vybrané prodejny)') != -1):
-                iStock.append(f'{iBook[i]} - neni skladem')
-            else:
-                iStock.append(f'{iBook[i]} - neni skladem')
-
-        return iStock
-
     def BookStock(self):
+        """ 
+        arg:
+            - aFind - list of books with their availability
+            - aBooks - list of books
+        return:
+            - iStock - list of books that are in stock
+        """
+
         iBook = self.driver.find_element_by_xpath('//*[@id="snippet-bookDetail-availabilityInfo"]/div/div[1]/ul/li[1]/a/span[2]')
         if (iBook.text == 'Skladem'):
             return True
         else:
             return False
 
-    def BookCount(self, aBooks, aRefs):
-        iBookstock = []
-        for i in range(len(aBooks)):
-            iStock = self.DobrSearch(aBooks[i])
-            sleep(1)
-            if (not iStock):
-                iBookstock = [aBooks[i]]
-            self.driver.find_element_by_xpath('/html/body/div[2]/header/div/p/a')\
-                .click()
-            sleep(1)
-        print(iBookstock)
-        return iBookstock
-
     def WebPage(self, aWebPage):
         # Reduce size of the window for complete program
         # self.driver.set_window_size(100, 100)
         self.driver.set_window_position(-1920,0)
-        self.driver.set_window_size(1000, 1080)
+        self.driver.set_window_size(1300, 1080)
         self.driver.get(aWebPage)
         sleep(2)
 
