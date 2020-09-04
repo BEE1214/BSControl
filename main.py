@@ -11,30 +11,36 @@ from data.books import bookstores
 
 def main():
     bot = bscontrol()
-    # bot.WebPage(bookstores.iBookstores['Kosmas'])
-    # iKosmas = bot.KosSearch(books.iBooksKos, books.iRefsKos)
-    # print('----------Kosmas----------')
-    # bot.KosStock(iKosmas)
 
-    # bot.WebPage(bookstores.iBookstores['Dobrovsky'])
-    # iDobrovsky = bot.DobrSearch(books.iBooksDobr)
-    # print('----------Dobrovsky----------')
-    # # iStock = bot.KosStock(books.iBooks, iTemp)
-    # iStock = bot.DobrStock(books.iBooksDobr, iDobrovsky)
-    # for i in range(len(iStock)):
-    #     if(iStock[i].find('neni skladem') != -1):
-    #         print(iStock[i])
-    #     pass
+    print('----------Kosmas----------')
+    bot.WebPage(bookstores.iBookstores['Kosmas'])
+    iKosmas = bot.KosSearch(books.iBooksKos, books.iRefsKos)
+    bot.KosStock(iKosmas)
     
-    # bot.WebPage(bookstores.iBookstores['Luxor'])
+
+    print('----------Dobrovsky----------')
+    bot.WebPage(bookstores.iBookstores['Dobrovsky'])
+    iDobrovsky = bot.DobrSearch(books.iBooksDobr)
+    # iStock = bot.KosStock(books.iBooks, iTemp)
+    iStock = bot.DobrStock(books.iBooksDobr, iDobrovsky)
+    bot.PrintBooks(iStock)
+
+    
+    print('----------Luxor----------')
+    bot.WebPage(bookstores.iBookstores['Luxor'])
     iLuxor = bot.LuxSearch(books.iBooksLux, books.iRefsLux)
     iLuxStock = bot.LuxStock(iLuxor, books.iBooksLux)
-    for i in range(len(iLuxStock)):
-        print(iLuxStock[i])
-    pass
+    bot.PrintBooks(iLuxStock)
+
+
+    print('----------Martinus----------')
+    bot.WebPage(bookstores.iBookstores['Martinus'])
+    iMartinus = bot.MarSearch(books.iBooksMar)
+    iMartinus = bot.MarUrl(books.iBooksMarDic, iMartinus)
+    iMarStock = bot.MarStock(books.iBooksMar, iMartinus)
+    bot.PrintBooks(iMarStock)
+    return 0
 
 if __name__ == '__main__':
     # Source code
     main()
-
-    # //*[@id="product-list-content"]/div[1]/div/div/div/div/div[2]/div/div/div[2]/div/div/div/div/div[1]/a[1]

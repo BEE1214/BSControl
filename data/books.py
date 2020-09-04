@@ -88,11 +88,32 @@ class books:
         'Jak se dostat na vysokou školu'                : 'https://www.luxor.cz/product/jak-se-dostat-na-vysokou-skolu-zbo000198595',
     }
 
+    iBooksMar=[
+        'Studijní předpoklady a základy logiky 1 (Chcete se dostat na vysokou školu?)',
+        'Studijní předpoklady a základy logiky 2. díl',
+        'Chcete se dostat na lékařskou fakultu? 1.',
+        'Chcete se dostat na lékařskou fakultu (2. díl - Biológie)',
+        'Chcete se dostat na lékařskou fakultu? (Fyzika)',
+        'Chcete se dostat na lékařskou fakultu? - 4.díl (Biologie, fyzika, chemie)',
+        'Chcete se dostat na fakultu sociálních studií (věd)?',
+        'Chcete se dostat na vysokou školu? Nemčina',
+        'Chcete se dostat na ekonomickou fakultu 1.díl - Matematika',
+        'Chcete se dostat na právnickou fakultu 2.díl - Cvičebnice',
+        'Jak se dostat na VŠ? (Podrobný průvodce přijímacím řízením)',
+        'Základy společenských věd - I. díl - 2. vydání',
+    ]
+
+    iBooksMarDic=[
+       'https://www.martinus.cz/?uItem=67118',
+       'https://www.martinus.cz/?uItem=63128',
+    ]
+
 
 class bookstores:
     iBookstores = {
         'Dobrovsky' : 'https://www.knihydobrovsky.cz/',
         'Kosmas' : 'https://www.kosmas.cz/',
         'Luxor' : 'https://www.luxor.cz/',
+        'Martinus' : 'https://www.martinus.cz/',
 
     }

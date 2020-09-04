@@ -163,16 +163,81 @@ class bscontrol:
     def KosStock(self, aStock):
         """ 
         arg:
-            - aFind - list of books with their availability
-            - aBooks - list of books
+            - aStock - list of books with their availability
         return:
-            - iStock - list of books that are in stock
+            - inStock - list of books that aren't in stock
         """
-
+        inStock = []
         for i in range(len(aStock)):
             if aStock[i].find('Skladem') == -1 :
-                print(aStock[i])
+                inStock.append(aStock[i])
             pass
+        return inStock
+    
+    def MarSearch(self, aBooks):
+        """
+        Search on martinus.cz
+        Searches for information about aBooks on current web page.
+
+        args:
+            - aBooks - list of books
+        Returns:
+            - iFind - list of founded informations
+        """
+
+        iFind = []
+        iLBook = -1
+        iCount = 2
+
+        for i in range(len(aBooks)):
+            self.driver.find_element_by_id('search-in-header')\
+                .send_keys(aBooks[i])
+            self.driver.find_element_by_id('search-in-header')\
+                .send_keys(Keys.RETURN)
+            sleep(2)
+            while (iLBook == -1):
+                # //*[@id="page-container"]/main/section[2]/div/div/div[2]/div[2]/div[1]/div/div/div[2]/div[1]/div[1]/div/h2/a
+                iPrint = self.driver.find_element_by_xpath(
+                    f'//*[@id="page-container"]/main/section[2]/div/div/div[2]/div[{iCount}]'
+                    )
+                iLBook = iPrint.text.find(aBooks[i])
+                if (iLBook != -1):
+                    self.driver.find_element_by_xpath(
+                        f'//*[@id="page-container"]/main/section[2]/div/div/div[2]/div[{iCount}]/div/div[1]/div/div[2]/div[1]/h2/a'
+                    ).click()
+                    pass
+                iCount += 1
+                pass
+            sleep(2)
+            iFind.append(self.driver.find_element_by_xpath('//p[contains(@class, "mj-delivery-time mb-small text-color-grey-dark")]').text)
+            iCount = 2
+            iLBook = -1
+        return iFind
+
+    def MarUrl(self, aUrl, aFind):
+        iFind = aFind
+
+        for i in range(len(aUrl)):
+            try:
+                self.WebPage(aUrl[i])
+                iFind.append(self.driver.find_element_by_xpath('//p[contains(@class, "mj-delivery-time mb-small text-color-grey-dark")]').text)
+            except:
+                print('Cannot locate element')
+
+        return iFind
+        
+    def MarStock(self, aBooks, aFind):
+        iStock = []
+        for i in range(len(aBooks)):
+            if (aFind[i].find('Na skladě') == -1):
+                iStock.append(f'{aBooks[i]} - neni skladem')
+                pass
+            pass
+        return iStock
+
+    def PrintBooks(self, aStock):
+        for i in range(len(aStock)):
+            print(aStock[i])
         pass
 
     def BookStock(self):
