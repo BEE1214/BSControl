@@ -23,6 +23,7 @@ class bscontrol:
             self.driver_path = r'C:/Users/adamd/Apps/Chromdriver/chromedriver.exe'
             self.driver = webdriver.Chrome(executable_path=self.driver_path)
 
+# ================== Dobrovsky =====================
     def DobrSearch(self, aBooks):
         """ 
         Search on dobrovskyknihy.cz
@@ -88,6 +89,7 @@ class bscontrol:
 
         return iStock
 
+# ==================== Luxor =======================
     def LuxSearch(self, aBooks, aRefs):
         """ 
         Search on luxor.cz
@@ -126,6 +128,7 @@ class bscontrol:
         
         return iStock
 
+# =================== Kosmas =======================
     def KosSearch(self, aBooks, aRefs):
         """ 
         Search on kosmas.cz
@@ -174,6 +177,7 @@ class bscontrol:
             pass
         return inStock
     
+# ================== Martinus ======================
     def MarSearch(self, aBooks):
         """
         Search on martinus.cz
@@ -235,6 +239,33 @@ class bscontrol:
             pass
         return iStock
 
+# ================== Megaknihy =====================
+    def MKSearch(self, aBooks, aRefs) :
+        iSearch = []
+
+        for i in range(len(aBooks)):
+            self.WebPage(aRefs[aBooks[i]])
+            iSearch.append(self.driver.find_element_by_xpath(
+                '//span[contains(@class, "avail_now_text")]'
+                ).text)
+
+        return iSearch
+
+    def MKStock(self, aBooks, aSearch):
+        iStock = []
+
+        for i in range(len(aBooks)):
+            if(aSearch[i].find('máme skladem') == -1):
+                iStock.append(f'{aBooks[i]} - neni skladem')
+
+        return iStock
+
+# ================== Megaknihy =====================
+    def ABZSearch(self, aBooks, aRefs):
+        iSearch = []
+
+        return iSearch
+        
     def PrintBooks(self, aStock):
         for i in range(len(aStock)):
             print(aStock[i])
