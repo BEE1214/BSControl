@@ -160,6 +160,23 @@ class books:
         'Základy společenských věd - 1. díl' : 'https://knihy.abz.cz/prodej/zaklady-spolecenskych-ved-i-dil-1',
     }
 
+    iBooksKC = {
+        'Studijní předpoklady a základy logiky - 1.'                : 'https://www.knihcentrum.cz/studijni-predpoklady-a-zaklady-logiky-1dil',
+        'Studijní předpoklady a základy logiky - 2.'                : 'https://www.knihcentrum.cz/studijni-predpoklady-a-zaklady-logiky-2-dil',
+        'Chcete se dostat na lékařskou fakultu? 1.'                 : 'https://www.knihcentrum.cz/chcete-se-dostat-na-lekarskou-fakultu-1',
+        'Chcete se dostat na lékařskou fakultu? 2.'                 : 'https://www.knihcentrum.cz/chcete-se-dostat-na-lekarskou-fakultu-2dil-2',
+        'Chcete se dostat na lékařskou fakultu? 3.'                 : 'https://www.knihcentrum.cz/chcete-se-dostat-na-lekarskou-fakultu-3dil-2',
+        'Chcete se dostat na lékařskou fakultu? 4.'                 : 'https://www.knihcentrum.cz/chcete-se-dostat-na-lekarskou-fakultu-3dil-2',
+        'Chcete se dostat na fakultu sociálních studií (věd)?'      : 'https://www.knihcentrum.cz/chcete-se-dostat-na-fakultu-socialnich-studii-ved-2-dil',
+        'Chcete se dostat na vysokou školu? Angličtina'             : 'https://www.knihcentrum.cz/chcete-se-dostat-na-vysokou-skolu-anglictina-1',
+        'Chcete se dostat na VŠ? Němčina'                           : 'https://www.knihcentrum.cz/chcete-se-dostat-na-vysokou-skolu-nemcina',
+        'Chcete se dostat na ekonomickou fakultu 1.díl'             : 'https://www.knihcentrum.cz/chcete-se-dostat-na-ekonomickou-fakultu-1dil',
+        'Chcete se dostat na právnickou fakultu? 1'                 : 'https://www.knihcentrum.cz/chcete-se-dostat-na-pravnickou-fakultu-3',
+        'Chcete se dostat na právnickou fakultu? 2'                 : 'https://www.knihcentrum.cz/chcete-se-dostat-na-pravnickou-fakultu-2-dil',
+        'Jak se dostat na vysokou školu?'                           : 'https://www.knihcentrum.cz/chcete-se-dostat-na-vysokou-skolu-nemcina',
+        'Základy společenských věd - 1. díl'                        : 'https://www.knihcentrum.cz/zaklady-spolecenskych-ved-i-1',
+    }
+
 
 
 class bookstores:
@@ -170,5 +187,7 @@ class bookstores:
         'Martinus' : 'https://www.martinus.cz/',
         'Megaknihy' : 'https://www.megaknihy.cz/',
         'ABZ' : 'https://knihy.abz.cz/',
+        'Knihcentrum' : 'https://www.knihcentrum.cz/',
+        'Knihy' : 'https://www.knihy.cz/',
 
     }

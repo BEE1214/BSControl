@@ -12,7 +12,7 @@ from data.books import bookstores
 def main():
     bot = bscontrol()
 
-    # print('----------Kosmas----------')
+    # print('---------- Kosmas ----------')
     # bot.WebPage(bookstores.iBookstores['Kosmas'])
     # iKosmas = bot.KosSearch(books.iBooksKos, books.iRefsKos)
     # if(iKosmas == []):
@@ -21,7 +21,7 @@ def main():
     #     bot.KosStock(iKosmas)
     
 
-    # print('----------Dobrovsky----------')
+    # print('---------- Dobrovsky ----------')
     # bot.WebPage(bookstores.iBookstores['Dobrovsky'])
     # iDobrovsky = bot.DobrSearch(books.iBooksDobr)
     # # iStock = bot.KosStock(books.iBooks, iTemp)
@@ -32,7 +32,7 @@ def main():
     #     bot.PrintBooks(iStock)
 
     
-    # print('----------Luxor----------')
+    # print('---------- Luxor ----------')
     # bot.WebPage(bookstores.iBookstores['Luxor'])
     # iLuxor = bot.LuxSearch(books.iBooksLux, books.iRefsLux)
     # iLuxStock = bot.LuxStock(iLuxor, books.iBooksLux)
@@ -42,7 +42,7 @@ def main():
     #     bot.PrintBooks(iLuxStock)
 
 
-    # print('----------Martinus----------')
+    # print('---------- Martinus ----------')
     # bot.WebPage(bookstores.iBookstores['Martinus'])
     # iMartinus = bot.MarSearch(books.iBooksMar)
     # iMartinus = bot.MarUrl(books.iBooksMarDic, iMartinus)
@@ -52,14 +52,21 @@ def main():
     # else :
     #     bot.PrintBooks(iMarStock)
 
-    # print('---------Megaknihy---------')
+    # print('--------- Megaknihy ---------')
     # iMKSearch = bot.MKSearch(books.iBooks, books.iBooksMK)
     # iMKStock = bot.MKStock(books.iBooks, iMKSearch)
     # bot.PrintBooks(iMKStock)
 
-    print('---------ABZKnihy---------')
-    iABZSearch = bot.ABZSearch(books.iBooks, books.iBooksABZ)
-    bot.PrintBooks(bot.ABZStock(books.iBooks, iABZSearch))
+    # print('--------- ABZKnihy ---------')
+    # iABZSearch = bot.ABZSearch(books.iBooks, books.iBooksABZ)
+    # bot.PrintBooks(bot.ABZStock(books.iBooks, iABZSearch))
+
+    print('--------- Knihcentrum ---------')
+    iKCSearch = bot.KCSearch(books.iBooks, books.iBooksKC)
+    bot.PrintBooks(bot.KCStock(books.iBooks, iKCSearch))
+    
+    # bot.PrintBooks(bot.ABZStock(books.iBooks, iABZSearch))
+
 
     return 0
 

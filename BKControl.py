@@ -17,11 +17,16 @@ class bscontrol:
             self.options.binary_location = '/usr/bin/brave'
             self.driver_path = '/usr/local/bin/chromedriver'
             self.driver = webdriver.Chrome(options = self.options,executable_path = self.driver_path)
+            self.driver.set_window_position(-1920,0)
+            self.driver.set_window_size(1300, 1080)
         elif (system() == 'Windows'):
             # self.options = Options()
             # self.options.binary_location = 'C:/Program Files (x86)/BraveSoftware/Brave-Browser/Application/brave.exe'
             self.driver_path = r'C:/Users/adamd/Apps/Chromdriver/chromedriver.exe'
             self.driver = webdriver.Chrome(executable_path=self.driver_path)
+            self.driver.set_window_position(-1920,0)
+            self.driver.set_window_size(1300, 1080)
+
 
 # ================== Dobrovsky =====================
     def DobrSearch(self, aBooks):
@@ -260,7 +265,7 @@ class bscontrol:
 
         return iStock
 
-# ================== Megaknihy =====================
+# ================== ABZKnihy =====================
     def ABZSearch(self, aBooks, aRefs):
         iSearch = []
 
@@ -277,6 +282,43 @@ class bscontrol:
                 iStock.append(f'{aBooks[i]} - neni skladem')
 
         return iStock
+
+# ================== Knihcentrum =====================
+    def KCSearch(self, aBooks, aRefs):
+        iSearch = []
+
+        for i in range(len(aBooks)):
+            self.WebPage(aRefs[aBooks[i]])
+            iSearch.append(self.driver.find_element_by_xpath('//span[contains(@class, "stock-name")]').text)
+        return iSearch
+
+    def KCStock(self, aBooks, aSearch):
+        iStock = []
+
+        for i in range(len(aBooks)):
+            if(aSearch[i].find('IHNED odesíláme') == -1) and (aSearch[i].find('poslední kusy') == -1):
+                iStock.append(f'{aBooks[i]} - neni skladem')
+
+        return iStock
+
+# # ===================== Knihy ========================
+#     def KnihySearch(self, aBooks, aRefs):
+#         iSearch = []
+
+#         for i in range(len(aBooks)):
+#             self.WebPage(aRefs[aBooks[i]])
+#             iSearch.append(self.driver.find_element_by_xpath('//span[contains(@class, "stock-name")]').text)
+#         return iSearch
+
+#     def KnihyStock(self, aBooks, aSearch):
+#         iStock = []
+
+#         for i in range(len(aBooks)):
+#             if(aSearch[i].find('IHNED odesíláme') == -1) and (aSearch[i].find('poslední kusy') == -1):
+#                 iStock.append(f'{aBooks[i]} - neni skladem')
+
+#         return iStock
+
 
     def PrintBooks(self, aStock):
         for i in range(len(aStock)):
@@ -301,8 +343,6 @@ class bscontrol:
     def WebPage(self, aWebPage):
         # Reduce size of the window for complete program
         # self.driver.set_window_size(100, 100)
-        self.driver.set_window_position(-1920,0)
-        self.driver.set_window_size(1300, 1080)
         self.driver.get(aWebPage)
         sleep(2)
 
