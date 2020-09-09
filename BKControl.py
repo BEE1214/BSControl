@@ -246,8 +246,8 @@ class bscontrol:
         for i in range(len(aBooks)):
             self.WebPage(aRefs[aBooks[i]])
             iSearch.append(self.driver.find_element_by_xpath(
-                '//span[contains(@class, "avail_now_text")]'
-                ).text)
+                            '//span[contains(@class, "avail_now_text")]'
+                            ).text)
 
         return iSearch
 
@@ -264,8 +264,20 @@ class bscontrol:
     def ABZSearch(self, aBooks, aRefs):
         iSearch = []
 
+        for i in range(len(aBooks)):
+            self.WebPage(aRefs[aBooks[i]])
+            iSearch.append(self.driver.find_element_by_xpath('//div[contains(@class, "prices_1_real")]').text)
         return iSearch
-        
+
+    def ABZStock(self, aBooks, aSearch):
+        iStock = []
+
+        for i in range(len(aBooks)):
+            if(aSearch[i].find('je skladem') == -1):
+                iStock.append(f'{aBooks[i]} - neni skladem')
+
+        return iStock
+
     def PrintBooks(self, aStock):
         for i in range(len(aStock)):
             print(aStock[i])

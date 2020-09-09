@@ -143,6 +143,24 @@ class books:
         'Základy společenských věd - 1. díl' : 'https://www.megaknihy.cz/cizi-jazyky/150910-zaklady-spolecenskych-ved-i-dil-2-vydani.html?search_pos=1'
     }
 
+    iBooksABZ = {
+        'Studijní předpoklady a základy logiky - 1.' : 'https://knihy.abz.cz/prodej/studijni-predpoklady-a-zaklady-logiky-1-dil-teorie-a-priklady',
+        'Studijní předpoklady a základy logiky - 2.' : 'https://knihy.abz.cz/prodej/testy-obecnych-studijnich-predpokladu-a-zaklady-logiky-2-dil',
+        'Chcete se dostat na lékařskou fakultu? 1.' : 'https://knihy.abz.cz/prodej/chcete-se-dostat-na-lekarskou-fakultu-1-dil-chemie-220-otazek-a-z-prijimacich-zkousek-s-resenim',
+        'Chcete se dostat na lékařskou fakultu? 2.' : 'https://knihy.abz.cz/prodej/chcete-se-dostat-na-lekarskou-fakultu-biologie-2-dil',
+        'Chcete se dostat na lékařskou fakultu? 3.' : 'https://knihy.abz.cz/prodej/chcete-se-dostat-na-lekarskou-fakultu-3-dil',
+        'Chcete se dostat na lékařskou fakultu? 4.' : 'https://knihy.abz.cz/prodej/chcete-se-dostat-na-lekarskou-fakultu-4-dil-cvicebnice-testovych-otazek',
+        'Chcete se dostat na fakultu sociálních studií (věd)?' : 'https://knihy.abz.cz/prodej/chcete-se-dostat-na-fakultu-socialnich-studii-ved-psychologie-a-sociologie-filozofie-a-politicka-filozofie-politologie',
+        'Chcete se dostat na vysokou školu? Angličtina' : 'https://knihy.abz.cz/prodej/chcete-se-dostat-na-vysokou-skolu-anglictina-500-testovych-otazek-z-prijimacich-zkousek-s-resenim',
+        'Chcete se dostat na VŠ? Němčina' : 'https://knihy.abz.cz/prodej/chcete-se-dostat-na-vysokou-skolu-nemcina',
+        'Chcete se dostat na ekonomickou fakultu 1.díl' : 'https://knihy.abz.cz/prodej/chcete-se-dostat-na-ekonomickou-fakultu-1-dil',
+        'Chcete se dostat na právnickou fakultu? 1' : 'https://knihy.abz.cz/prodej/chcete-se-dostat-na-pravnickou-fakultu-1-dil-2-vydani',
+        'Chcete se dostat na právnickou fakultu? 2' : 'https://knihy.abz.cz/prodej/chcete-se-dostat-na-pravnickou-fakultu-2-dil-1',
+        'Jak se dostat na vysokou školu?' : 'https://knihy.abz.cz/prodej/jak-se-dostat-na-vysokou-skolu',
+        'Základy společenských věd - 1. díl' : 'https://knihy.abz.cz/prodej/zaklady-spolecenskych-ved-i-dil-1',
+    }
+
+
 
 class bookstores:
     iBookstores = {
@@ -151,5 +169,6 @@ class bookstores:
         'Luxor' : 'https://www.luxor.cz/',
         'Martinus' : 'https://www.martinus.cz/',
         'Megaknihy' : 'https://www.megaknihy.cz/',
+        'ABZ' : 'https://knihy.abz.cz/',
 
     }

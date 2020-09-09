@@ -52,10 +52,14 @@ def main():
     # else :
     #     bot.PrintBooks(iMarStock)
 
-    print('---------Megaknihy---------')
-    iMKSearch = bot.MKSearch(books.iBooks, books.iBooksMK)
-    iMKStock = bot.MKStock(books.iBooks, iMKSearch)
-    bot.PrintBooks(iMKStock)
+    # print('---------Megaknihy---------')
+    # iMKSearch = bot.MKSearch(books.iBooks, books.iBooksMK)
+    # iMKStock = bot.MKStock(books.iBooks, iMKSearch)
+    # bot.PrintBooks(iMKStock)
+
+    print('---------ABZKnihy---------')
+    iABZSearch = bot.ABZSearch(books.iBooks, books.iBooksABZ)
+    bot.PrintBooks(bot.ABZStock(books.iBooks, iABZSearch))
 
     return 0
 
