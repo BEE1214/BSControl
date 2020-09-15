@@ -28,7 +28,7 @@ class bscontrol:
             self.driver.set_window_size(1300, 1080)
 
 
-# ================== Dobrovsky =====================
+# ================== Dobrovsky =======================
     def DobrSearch(self, aBooks):
         """ 
         Search on dobrovskyknihy.cz
@@ -94,7 +94,7 @@ class bscontrol:
 
         return iStock
 
-# ==================== Luxor =======================
+# ==================== Luxor =========================
     def LuxSearch(self, aBooks, aRefs):
         """ 
         Search on luxor.cz
@@ -133,7 +133,7 @@ class bscontrol:
         
         return iStock
 
-# =================== Kosmas =======================
+# =================== Kosmas =========================
     def KosSearch(self, aBooks, aRefs):
         """ 
         Search on kosmas.cz
@@ -182,7 +182,7 @@ class bscontrol:
             pass
         return inStock
     
-# ================== Martinus ======================
+# ================== Martinus ========================
     def MarSearch(self, aBooks):
         """
         Search on martinus.cz
@@ -244,7 +244,7 @@ class bscontrol:
             pass
         return iStock
 
-# ================== Megaknihy =====================
+# ================== Megaknihy =======================
     def MKSearch(self, aBooks, aRefs) :
         iSearch = []
 
@@ -265,7 +265,7 @@ class bscontrol:
 
         return iStock
 
-# ================== ABZKnihy =====================
+# ================== ABZKnihy ========================
     def ABZSearch(self, aBooks, aRefs):
         iSearch = []
 
@@ -301,44 +301,64 @@ class bscontrol:
 
         return iStock
 
-# # ===================== Knihy ========================
-#     def KnihySearch(self, aBooks, aRefs):
-#         iSearch = []
+# ===================== BookSearch ========================
+    def BookSearch(self, aUrl, aPath):
+        """
+        arg:
+            aUrl - url of bookstore
+            aPath - xpath for element on page
+        return:
+            iSearch - list of searched books with their stock status
+        """
+        iSearch = []
 
-#         for i in range(len(aBooks)):
-#             self.WebPage(aRefs[aBooks[i]])
-#             iSearch.append(self.driver.find_element_by_xpath('//span[contains(@class, "stock-name")]').text)
-#         return iSearch
+        for i in range(len(aUrl)):
+            self.WebPage(aUrl[i])
+            iSearch.append(f'{self.driver.find_element_by_xpath(aPath["name"]).text}{self.driver.find_element_by_xpath(aPath["url"]).text}')
+        return iSearch
 
-#     def KnihyStock(self, aBooks, aSearch):
-#         iStock = []
+    def BookStock(self, aBooks, aStock):
+        """
+        arg:
+            aBooks - list of books with their stock status
+            aStock - key word for stock option for different pages
+        return:
+            iStock - list of books that aren't in stock
+        """
+        iStock = []
 
-#         for i in range(len(aBooks)):
-#             if(aSearch[i].find('IHNED odesíláme') == -1) and (aSearch[i].find('poslední kusy') == -1):
-#                 iStock.append(f'{aBooks[i]} - neni skladem')
+        for i in range(len(aBooks)):
+            if(aBooks[i].find(aStock) == -1):
+                iStock.append(f'{aBooks[i]}')
 
-#         return iStock
+        if (iStock == []):
+            iStock.append('Vse skladem')
+            
+        return iStock
 
 
     def PrintBooks(self, aStock):
+        """
+        Simple list printing function.
+        """
         for i in range(len(aStock)):
             print(aStock[i])
         pass
 
-    def BookStock(self):
-        """ 
-        arg:
-            - aFind - list of books with their availability
-            - aBooks - list of books
-        return:
-            - iStock - list of books that are in stock
-        """
+    # def BookStock(self):
+    #     """ 
+    #     arg:
+    #         - aFind - list of books with their availability
+    #         - aBooks - list of books
+    #     return:
+    #         - iStock - list of books that are in stock
+    #     """
 
-        iBook = self.driver.find_element_by_xpath('//*[@id="snippet-bookDetail-availabilityInfo"]/div/div[1]/ul/li[1]/a/span[2]')
-        if (iBook.text == 'Skladem'):
-            return True
-        else:
-            return False
+    #     iBook = self.driver.find_element_by_xpath('//*[@id="snippet-bookDetail-availabilityInfo"]/div/div[1]/ul/li[1]/a/span[2]')
+    #     if (iBook.text == 'Skladem'):
+    #         return True
+    #     else:
+    #         return False
 
     def WebPage(self, aWebPage):
         # Reduce size of the window for complete program

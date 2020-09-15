@@ -106,6 +106,7 @@ class books:
         'Jak se dostat na vysokou školu'                : 'https://www.luxor.cz/product/jak-se-dostat-na-vysokou-skolu-zbo000198595',
     }
 
+    # ---------- Martinus -------------
     iBooksMar=[
         'Studijní předpoklady a základy logiky 1 (Chcete se dostat na vysokou školu?)',
         'Studijní předpoklady a základy logiky 2. díl',
@@ -126,40 +127,43 @@ class books:
        'https://www.martinus.cz/?uItem=63128',
     ]
 
+    # ---------- Megaknihy -------------
     iBooksMK = {
-        'Studijní předpoklady a základy logiky - 1.' : 'https://www.megaknihy.cz/ostatni/267298-studijni-predpoklady-a-zaklady-logiky-1-dil.html?search_pos=1',
-        'Studijní předpoklady a základy logiky - 2.' : 'https://www.megaknihy.cz/maturita-prijimacky/268969-testy-obecnych-studijnich-predpokladu-a-zaklady-logiky-2-dil.html?block=edition&position=2',
-        'Chcete se dostat na lékařskou fakultu? 1.': 'https://www.megaknihy.cz/cizi-jazyky/140214-chcete-se-dostat-na-lekarskou-fakultu-chemie-1-dil-3-vydani.html?search_pos=1',
-        'Chcete se dostat na lékařskou fakultu? 2.' : 'https://www.megaknihy.cz/cizi-jazyky/95132-chcete-se-dostat-na-lekarskou-fakultu-2-dil.html?search_pos=1',
-        'Chcete se dostat na lékařskou fakultu? 3.' : 'https://www.megaknihy.cz/cizi-jazyky/149616-chcete-se-dostat-na-lekarskou-fakultu-fyzika-3-dil-3-vydani.html?search_pos=1',
-        'Chcete se dostat na lékařskou fakultu? 4.' : 'https://www.megaknihy.cz/stredni-skola/95133-chcete-se-dostat-na-lekarskou-fakultu-4-dil-biologie-fyzika-chemie.html?search_pos=1',
-        'Chcete se dostat na fakultu sociálních studií (věd)?' : 'https://www.megaknihy.cz/cizi-jazyky/145060-chcete-se-dostat-na-fakultu-socialnich-studii-ved.html?search_pos=1',
-        'Chcete se dostat na vysokou školu? Angličtina' : 'https://www.megaknihy.cz/cizi-jazyky/57164-chcete-se-dostat-na-vysokou-skolu-anglictina.html?search_pos=1',
-        'Chcete se dostat na VŠ? Němčina' : 'https://www.megaknihy.cz/cizi-jazyky/42750-chcete-se-dostat-na-vysokou-skolu-nemcina.html?search_pos=2',
-        'Chcete se dostat na ekonomickou fakultu 1.díl' : 'https://www.megaknihy.cz/cizi-jazyky/50493-chcete-se-dostat-na-ekonomickou-fakultu-1-dil.html?search_pos=1',
-        'Chcete se dostat na právnickou fakultu? 1' : 'https://www.megaknihy.cz/cizi-jazyky/57167-chcete-se-dostat-na-pravnickou-fakultu.html?search_pos=1',
-        'Chcete se dostat na právnickou fakultu? 2' : 'https://www.megaknihy.cz/cizi-jazyky/129347-chcete-se-dostat-na-pravnickou-fakultu-2-dil.html?search_pos=1',
-        'Jak se dostat na vysokou školu?': 'https://www.megaknihy.cz/cizi-jazyky/46834-jak-se-dostat-na-vysokou-skolu.html?search_pos=1',
-        'Základy společenských věd - 1. díl' : 'https://www.megaknihy.cz/cizi-jazyky/150910-zaklady-spolecenskych-ved-i-dil-2-vydani.html?search_pos=1'
+        'Studijní předpoklady a základy logiky - 1.'            : 'https://www.megaknihy.cz/ostatni/267298-studijni-predpoklady-a-zaklady-logiky-1-dil.html?search_pos=1',
+        'Studijní předpoklady a základy logiky - 2.'            : 'https://www.megaknihy.cz/maturita-prijimacky/268969-testy-obecnych-studijnich-predpokladu-a-zaklady-logiky-2-dil.html?block=edition&position=2',
+        'Chcete se dostat na lékařskou fakultu? 1.'             : 'https://www.megaknihy.cz/cizi-jazyky/140214-chcete-se-dostat-na-lekarskou-fakultu-chemie-1-dil-3-vydani.html?search_pos=1',
+        'Chcete se dostat na lékařskou fakultu? 2.'             : 'https://www.megaknihy.cz/cizi-jazyky/95132-chcete-se-dostat-na-lekarskou-fakultu-2-dil.html?search_pos=1',
+        'Chcete se dostat na lékařskou fakultu? 3.'             : 'https://www.megaknihy.cz/cizi-jazyky/149616-chcete-se-dostat-na-lekarskou-fakultu-fyzika-3-dil-3-vydani.html?search_pos=1',
+        'Chcete se dostat na lékařskou fakultu? 4.'             : 'https://www.megaknihy.cz/stredni-skola/95133-chcete-se-dostat-na-lekarskou-fakultu-4-dil-biologie-fyzika-chemie.html?search_pos=1',
+        'Chcete se dostat na fakultu sociálních studií (věd)?'  : 'https://www.megaknihy.cz/cizi-jazyky/145060-chcete-se-dostat-na-fakultu-socialnich-studii-ved.html?search_pos=1',
+        'Chcete se dostat na vysokou školu? Angličtina'         : 'https://www.megaknihy.cz/cizi-jazyky/57164-chcete-se-dostat-na-vysokou-skolu-anglictina.html?search_pos=1',
+        'Chcete se dostat na VŠ? Němčina'                       : 'https://www.megaknihy.cz/cizi-jazyky/42750-chcete-se-dostat-na-vysokou-skolu-nemcina.html?search_pos=2',
+        'Chcete se dostat na ekonomickou fakultu 1.díl'         : 'https://www.megaknihy.cz/cizi-jazyky/50493-chcete-se-dostat-na-ekonomickou-fakultu-1-dil.html?search_pos=1',
+        'Chcete se dostat na právnickou fakultu? 1'             : 'https://www.megaknihy.cz/cizi-jazyky/57167-chcete-se-dostat-na-pravnickou-fakultu.html?search_pos=1',
+        'Chcete se dostat na právnickou fakultu? 2'             : 'https://www.megaknihy.cz/cizi-jazyky/129347-chcete-se-dostat-na-pravnickou-fakultu-2-dil.html?search_pos=1',
+        'Jak se dostat na vysokou školu?'                       : 'https://www.megaknihy.cz/cizi-jazyky/46834-jak-se-dostat-na-vysokou-skolu.html?search_pos=1',
+        'Základy společenských věd - 1. díl'                    : 'https://www.megaknihy.cz/cizi-jazyky/150910-zaklady-spolecenskych-ved-i-dil-2-vydani.html?search_pos=1'
     }
 
+    # ---------- ABZKnihy -------------
     iBooksABZ = {
-        'Studijní předpoklady a základy logiky - 1.' : 'https://knihy.abz.cz/prodej/studijni-predpoklady-a-zaklady-logiky-1-dil-teorie-a-priklady',
-        'Studijní předpoklady a základy logiky - 2.' : 'https://knihy.abz.cz/prodej/testy-obecnych-studijnich-predpokladu-a-zaklady-logiky-2-dil',
-        'Chcete se dostat na lékařskou fakultu? 1.' : 'https://knihy.abz.cz/prodej/chcete-se-dostat-na-lekarskou-fakultu-1-dil-chemie-220-otazek-a-z-prijimacich-zkousek-s-resenim',
-        'Chcete se dostat na lékařskou fakultu? 2.' : 'https://knihy.abz.cz/prodej/chcete-se-dostat-na-lekarskou-fakultu-biologie-2-dil',
-        'Chcete se dostat na lékařskou fakultu? 3.' : 'https://knihy.abz.cz/prodej/chcete-se-dostat-na-lekarskou-fakultu-3-dil',
-        'Chcete se dostat na lékařskou fakultu? 4.' : 'https://knihy.abz.cz/prodej/chcete-se-dostat-na-lekarskou-fakultu-4-dil-cvicebnice-testovych-otazek',
-        'Chcete se dostat na fakultu sociálních studií (věd)?' : 'https://knihy.abz.cz/prodej/chcete-se-dostat-na-fakultu-socialnich-studii-ved-psychologie-a-sociologie-filozofie-a-politicka-filozofie-politologie',
-        'Chcete se dostat na vysokou školu? Angličtina' : 'https://knihy.abz.cz/prodej/chcete-se-dostat-na-vysokou-skolu-anglictina-500-testovych-otazek-z-prijimacich-zkousek-s-resenim',
-        'Chcete se dostat na VŠ? Němčina' : 'https://knihy.abz.cz/prodej/chcete-se-dostat-na-vysokou-skolu-nemcina',
-        'Chcete se dostat na ekonomickou fakultu 1.díl' : 'https://knihy.abz.cz/prodej/chcete-se-dostat-na-ekonomickou-fakultu-1-dil',
-        'Chcete se dostat na právnickou fakultu? 1' : 'https://knihy.abz.cz/prodej/chcete-se-dostat-na-pravnickou-fakultu-1-dil-2-vydani',
-        'Chcete se dostat na právnickou fakultu? 2' : 'https://knihy.abz.cz/prodej/chcete-se-dostat-na-pravnickou-fakultu-2-dil-1',
-        'Jak se dostat na vysokou školu?' : 'https://knihy.abz.cz/prodej/jak-se-dostat-na-vysokou-skolu',
-        'Základy společenských věd - 1. díl' : 'https://knihy.abz.cz/prodej/zaklady-spolecenskych-ved-i-dil-1',
+        'Studijní předpoklady a základy logiky - 1.'            : 'https://knihy.abz.cz/prodej/studijni-predpoklady-a-zaklady-logiky-1-dil-teorie-a-priklady',
+        'Studijní předpoklady a základy logiky - 2.'            : 'https://knihy.abz.cz/prodej/testy-obecnych-studijnich-predpokladu-a-zaklady-logiky-2-dil',
+        'Chcete se dostat na lékařskou fakultu? 1.'             : 'https://knihy.abz.cz/prodej/chcete-se-dostat-na-lekarskou-fakultu-1-dil-chemie-220-otazek-a-z-prijimacich-zkousek-s-resenim',
+        'Chcete se dostat na lékařskou fakultu? 2.'             : 'https://knihy.abz.cz/prodej/chcete-se-dostat-na-lekarskou-fakultu-biologie-2-dil',
+        'Chcete se dostat na lékařskou fakultu? 3.'             : 'https://knihy.abz.cz/prodej/chcete-se-dostat-na-lekarskou-fakultu-3-dil',
+        'Chcete se dostat na lékařskou fakultu? 4.'             : 'https://knihy.abz.cz/prodej/chcete-se-dostat-na-lekarskou-fakultu-4-dil-cvicebnice-testovych-otazek',
+        'Chcete se dostat na fakultu sociálních studií (věd)?'  : 'https://knihy.abz.cz/prodej/chcete-se-dostat-na-fakultu-socialnich-studii-ved-psychologie-a-sociologie-filozofie-a-politicka-filozofie-politologie',
+        'Chcete se dostat na vysokou školu? Angličtina'         : 'https://knihy.abz.cz/prodej/chcete-se-dostat-na-vysokou-skolu-anglictina-500-testovych-otazek-z-prijimacich-zkousek-s-resenim',
+        'Chcete se dostat na VŠ? Němčina'                       : 'https://knihy.abz.cz/prodej/chcete-se-dostat-na-vysokou-skolu-nemcina',
+        'Chcete se dostat na ekonomickou fakultu 1.díl'         : 'https://knihy.abz.cz/prodej/chcete-se-dostat-na-ekonomickou-fakultu-1-dil',
+        'Chcete se dostat na právnickou fakultu? 1'             : 'https://knihy.abz.cz/prodej/chcete-se-dostat-na-pravnickou-fakultu-1-dil-2-vydani',
+        'Chcete se dostat na právnickou fakultu? 2'             : 'https://knihy.abz.cz/prodej/chcete-se-dostat-na-pravnickou-fakultu-2-dil-1',
+        'Jak se dostat na vysokou školu?'                       : 'https://knihy.abz.cz/prodej/jak-se-dostat-na-vysokou-skolu',
+        'Základy společenských věd - 1. díl'                    : 'https://knihy.abz.cz/prodej/zaklady-spolecenskych-ved-i-dil-1',
     }
 
+    # ---------- Knihcentrum -------------
     iBooksKC = {
         'Studijní předpoklady a základy logiky - 1.'                : 'https://www.knihcentrum.cz/studijni-predpoklady-a-zaklady-logiky-1dil',
         'Studijní předpoklady a základy logiky - 2.'                : 'https://www.knihcentrum.cz/studijni-predpoklady-a-zaklady-logiky-2-dil',
@@ -176,6 +180,31 @@ class books:
         'Jak se dostat na vysokou školu?'                           : 'https://www.knihcentrum.cz/chcete-se-dostat-na-vysokou-skolu-nemcina',
         'Základy společenských věd - 1. díl'                        : 'https://www.knihcentrum.cz/zaklady-spolecenskych-ved-i-1',
     }
+
+    # ---------- Knihy -------------
+    UrlKnihy = [
+        'https://www.knihy.cz/studijni-predpoklady-a-zaklady-logiky-1-dil/',
+        'https://www.knihy.cz/studijni-predpoklady-a-zaklady-logiky-2-dil/',
+        # '',
+        # '',
+        'https://www.knihy.cz/chcete-se-dostat-na-lekarskou-fakultu-3-dil/',
+        'https://www.knihy.cz/chcete-se-dostat-na-lekarskou-fakultu-4-dil/',
+        # '',
+        # '',
+        # '',
+        # '',
+        # '',
+        # '',
+        # '',
+        # '',
+    ]
+
+    PathKnihy = {
+        'name' : '//h1[contains(@class, "box-detail__info__title box-detail__info__title--with-authors")]',
+        'url' : '//div[contains(@class, "box-detail__info__availability box-detail__info__availability--code-inStock")]'
+    }
+
+    StockKnihy = 'Skladem 5+ ks'
 
 
 

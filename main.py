@@ -61,10 +61,18 @@ def main():
     # iABZSearch = bot.ABZSearch(books.iBooks, books.iBooksABZ)
     # bot.PrintBooks(bot.ABZStock(books.iBooks, iABZSearch))
 
-    print('--------- Knihcentrum ---------')
-    iKCSearch = bot.KCSearch(books.iBooks, books.iBooksKC)
-    bot.PrintBooks(bot.KCStock(books.iBooks, iKCSearch))
+    # print('--------- Knihcentrum ---------')
+    # iKCSearch = bot.KCSearch(books.iBooks, books.iBooksKC)
+    # bot.PrintBooks(bot.KCStock(books.iBooks, iKCSearch))
     
+    print('--------- Knihy ---------')
+    # needs to add url for all books
+    iKnihySearch = bot.BookSearch(books.UrlKnihy, books.PathKnihy)
+    iKnihyStock = bot.BookStock(iKnihySearch, books.StockKnihy)
+    bot.PrintBooks(iKnihyStock)
+
+    print('--------- Booktook ---------')
+
     # bot.PrintBooks(bot.ABZStock(books.iBooks, iABZSearch))
 
 
