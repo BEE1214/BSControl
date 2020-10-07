@@ -8,6 +8,8 @@ from platform import system
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.keys import Keys
+from selenium.common.exceptions import NoSuchElementException
+from selenium.common.exceptions import TimeoutException
 from time import sleep
 
 class bscontrol:
@@ -314,7 +316,19 @@ class bscontrol:
 
         for i in range(len(aUrl)):
             self.WebPage(aUrl[i])
-            iSearch.append(f'{self.driver.find_element_by_xpath(aPath["name"]).text} - {self.driver.find_element_by_xpath(aPath["url"]).text}')
+            try:
+                name = self.driver.find_element_by_xpath(aPath["name"]).text
+            except NoSuchElementException:
+                print('No such element on webpage')
+            except TimeoutException:
+                print('Your internet is too much of a potato')
+            try:
+                stock = self.driver.find_element_by_xpath(aPath["url"]).text
+                iSearch.append(f'{name} - {stock}')
+            except NoSuchElementException:
+                iSearch.append(f'{name} - neni skladem')
+            except TimeoutException:
+                print('Your internet is too much of a potato')
         return iSearch
 
     def BookStock(self, aBooks, aStock):

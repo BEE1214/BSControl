@@ -64,12 +64,7 @@ class books:
     }
 
     StockDobr = 'Skladem'
-    # neni skladem
-    # //*[@id="snippet-bookDetail-availabilityInfo"]/div/div[1]/ul/li[1]
-    # skladem
-    # //*[@id="snippet-bookDetail-availabilityInfo"]/div/div[1]/ul/li[1] 
-    # neni dostupny
-    # //*[@id="snippet-bookDetail-availabilityInfo"]/div/div[1]/ul/li
+
     # ----------- Kosmas ----------------
     iBooksKos = [
         'Studijní předpoklady a základy logiky 1.',
@@ -159,6 +154,30 @@ class books:
         'Chcete se dostat na právnickou fakultu 2'      : 'https://www.luxor.cz/product/chcete-se-dostat-na-pravnickou-fakultu-2-dil-vseobecny-prehled-a-zaklady-pra-zbo000198611',
         'Jak se dostat na vysokou školu'                : 'https://www.luxor.cz/product/jak-se-dostat-na-vysokou-skolu-zbo000198595',
     }
+
+    UrlLux = [
+        'https://www.luxor.cz/product/studijni-predpoklady-a-zaklady-logiky-1-dil-zbo000198618',
+        'https://www.luxor.cz/product/studijni-predpoklady-a-zaklady-logiky-2-dil-zbo000198619',
+        'https://www.luxor.cz/product/chcete-se-dostat-na-lekarskou-fakultu-zbo000198614',
+        'https://www.luxor.cz/product/chcete-se-dostat-na-lekarskou-fakultu-2-dil-zbo000198608',
+        'https://www.luxor.cz/product/chcete-se-dostat-na-lekarskou-fakultu-3-dil-fyzika-zbo000198615',
+        'https://www.luxor.cz/product/chcete-se-dostat-na-lekarskou-fakultu-4-dil-zbo000198607',
+        'https://www.luxor.cz/product/chcete-se-dostat-na-fakultu-socialnich-studii-ved-zbo000198612',
+        'https://www.luxor.cz/product/chcete-se-dostat-na-vysokou-skolu-anglictina-zbo000198603',
+        'https://www.luxor.cz/product/chcete-se-dostat-na-vysokou-skolu-nemcina-zbo000198596',
+        'https://www.luxor.cz/product/chcete-se-dostat-na-ekon-fak-1-dil-matematika-zbo000198598',
+        'https://www.luxor.cz/product/chcete-se-dostat-na-pravnickou-fakultu-zbo000198604',
+        'https://www.luxor.cz/product/chcete-se-dostat-na-pravnickou-fakultu-2-dil-vseobecny-prehled-a-zaklady-pra-zbo000198611',
+        'https://www.luxor.cz/product/jak-se-dostat-na-vysokou-skolu-zbo000198595',
+        'https://www.luxor.cz/product/zaklady-spolecenskych-ved-i-zbo000198616',
+    ]
+
+    PathLux = {
+        'name' : '//div[contains(@class, "ant-col ant-col-xs-24 ant-col-md-12")]',
+        'url' : '//div[contains(@class, "f1ubm3q7")]',
+    }
+
+    StockLux = 'SKLADEM'
 
     # ---------- Martinus -------------
     iBooksMar=[
