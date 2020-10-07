@@ -40,6 +40,36 @@ class books:
         'Jak se dostat na vysokou školu?',
     ]
 
+    UrlDobr = [
+        'https://www.knihydobrovsky.cz/kniha/studijni-predpoklady-a-zaklady-logiky-1-dil-13656514',
+        'https://www.knihydobrovsky.cz/kniha/testy-obecnych-studijnich-predpokladu-a-zaklady-logiky-2-dil-22193474',
+        'https://www.knihydobrovsky.cz/kniha/chcete-se-dostat-na-lekarskou-fakultu-chemie-1-dil-3-vydani-78643',
+        'https://www.knihydobrovsky.cz/kniha/chcete-se-dostat-na-lekarskou-fakultu-biologie-2-dil-3-vydani-16777',
+        'https://www.knihydobrovsky.cz/kniha/chcete-se-dostat-na-lekarskou-fakultu-fyzika-3-dil-3-vydani-88012',
+        'https://www.knihydobrovsky.cz/kniha/chcete-se-dostat-na-lekarskou-fakultu-4-dil-biologie-fyzika-chemie-39686',
+        'https://www.knihydobrovsky.cz/kniha/chcete-se-dostat-na-fakultu-socialnich-studii-ved-2-dil-3-vydani-88036',
+        'https://www.knihydobrovsky.cz/kniha/chcete-se-dostat-na-vysokou-skolu-anglictina-2-vydani-25684',
+        'https://www.knihydobrovsky.cz/kniha/chcete-se-dostat-na-vysokou-skolu-nemcina-79315',
+        'https://www.knihydobrovsky.cz/kniha/chcete-se-dostat-na-ekonomickou-fakultu-1-dil-matematika-2-vydani-80897',
+        'https://www.knihydobrovsky.cz/kniha/chcete-se-dostat-na-pravnickou-fakultu-1-dil-2-vydani-25432',
+        'https://www.knihydobrovsky.cz/kniha/chcete-se-dostat-na-pravnickou-fakultu-2-dil-3-vydani-80731',
+        'https://www.knihydobrovsky.cz/kniha/jak-se-dostat-na-vs-podrobny-pruvodce-prijimacim-rizenim-79316',
+        'https://www.knihydobrovsky.cz/kniha/zaklady-spolecenskych-ved-i-dil-2-vydani-89733',
+
+    ]
+
+    PathDobr = {
+        'name' : '//span[contains(@itemprop, "name")]',
+        'url' : '//*[@id="snippet-bookDetail-availabilityInfo"]/div/div[1]/ul/li[1]',
+    }
+
+    StockDobr = 'Skladem'
+    # neni skladem
+    # //*[@id="snippet-bookDetail-availabilityInfo"]/div/div[1]/ul/li[1]
+    # skladem
+    # //*[@id="snippet-bookDetail-availabilityInfo"]/div/div[1]/ul/li[1] 
+    # neni dostupny
+    # //*[@id="snippet-bookDetail-availabilityInfo"]/div/div[1]/ul/li
     # ----------- Kosmas ----------------
     iBooksKos = [
         'Studijní předpoklady a základy logiky 1.',
@@ -56,6 +86,30 @@ class books:
         'Chcete se dostat na právnickou fakultu 2',
         'Jak se dostat na vysokou školu',
     ]
+
+    UrlKos = [
+        'https://www.kosmas.cz/knihy/231633/studijni-predpoklady-a-zaklady-logiky-1.-dil/',
+        'https://www.kosmas.cz/knihy/231623/studijni-predpoklady-a-zaklady-logiky-2.-dil/',
+        'https://www.kosmas.cz/knihy/175416/chcete-se-dostat-na-lekarskou-fakultu-1.-dil-chemie/',
+        'https://www.kosmas.cz/knihy/157334/chcete-se-dostat-na-lekarskou-fakultu-2.-dil-biologie/',
+        'https://www.kosmas.cz/knihy/192198/chcete-se-dostat-na-lekarskou-fakultu-3.-dil-fyzika/',
+        'https://www.kosmas.cz/knihy/158409/chcete-se-dostat-na-lekarskou-fakultu/',
+        'https://www.kosmas.cz/knihy/277813/chcete-se-dostat-na-fakultu-socialnich-studii-ved-2.-dil/',
+        'https://www.kosmas.cz/knihy/147435/chcete-se-dostat-na-vysokou-skolu-anglictina/',
+        'https://www.kosmas.cz/knihy/137805/chcete-se-dostat-na-vs-nemcina/',
+        'https://www.kosmas.cz/knihy/139500/chcete-se-dostat-na-ekonomickou-fakultu-1.dil-matematika/',
+        'https://www.kosmas.cz/knihy/123964/chcete-se-dostat-na-pravnickou-fakultu-1/#pos=0',
+        'https://www.kosmas.cz/knihy/178916/chcete-se-dostat-na-pravnickou-fakultu-2.-dil-vseobecny-prehled-a-zaklady-prava/',
+        'https://www.kosmas.cz/knihy/137801/jak-se-dostat-na-vysokou-skolu/',
+        'https://www.kosmas.cz/knihy/149448/zaklady-spolecenskych-ved-i.-dil/',
+    ]
+
+    PathKos = {
+        'name' : '//h1[contains(@class, "product__title")]',
+        'url' : "//td[contains(@class, 'availability')]",
+    }
+
+    StockKos = 'Skladem'
 
     iRefsKos = [
         'studijni-predpoklady-a-zaklady-logiky-1.-dil',
@@ -200,23 +254,64 @@ class books:
     ]
 
     PathKnihy = {
-        'name' : '//h1[contains(@class, "box-detail__info__title box-detail__info__title--with-authors")]',
-        'url' : '//div[contains(@class, "box-detail__info__availability box-detail__info__availability--code-inStock")]'
+        'name'  : '//h1[contains(@class, "box-detail__info__title box-detail__info__title--with-authors")]',
+        'url'   : '//div[contains(@class, "box-detail__info__availability box-detail__info__availability--code-inStock")]'
     }
 
     StockKnihy = 'Skladem 5+ ks'
 
+    # ------------ BookTook --------------
+    UrlBT = [
+        'https://www.booktook.cz/p/testy-obecnych-studijnich-predpokladu-a-zaklady-logiky-1-dil-9788086572802/', # 11. editon
+        'https://www.booktook.cz/p/testy-obecnych-studijnich-predpokladu-a-zaklady-logiky-2-dil/',
+        'https://www.booktook.cz/p/chcete-se-dostat-na-lekarskou-fakultu-chemie-1-dil-3-vydani-220-otazek-z-prijimacich-zkousek-s-resenim/',
+    ]
+
+    PathBT = {
+        'name'  : '//*[@id="det-main"]/div[1]/h1/span',
+        # 'name'  : '//span[contains(@itemprop, "name")]',
+        'url'   : '//*[@id="det-buy"]/div/fieldset' 
+        # 'url'   : '//strong[contains(@class, "stock")]' 
+    }
+
+    StockBT = 'Skladem'
+    # --------------- sevt ---------------
+    UrlSevt = [
+        'https://www.sevt.cz/produkt/studijni-predpoklady-a-zaklady-logiky-1-dil-724l15349065/',
+        # 'zaklady logiky 2',
+        'https://www.sevt.cz/produkt/chcete-se-dostat-na-lekarskou-fakultu-1-dil-chemie-3-vydani-n0055705/',
+        'https://www.sevt.cz/produkt/chcete-se-dostat-na-lekarskou-fakultu-2-dil-biologie-3-vydani-n0055005/',
+        # 'lekarska 3.',
+        'https://www.sevt.cz/produkt/chcete-se-dostat-na-lekarskou-fakultu-4-dil-fyzika-n0063705/',
+        'https://www.sevt.cz/produkt/chcete-se-dostat-na-fakultu-socialnich-studii-2-dil-3-vydani-n0055605/.',
+        # 'anglictina',
+        'https://www.sevt.cz/produkt/chcete-se-dostat-na-vs-nemcina-n0055805/',
+        # 'ekonomicka',
+        'https://www.sevt.cz/produkt/chcete-se-dostat-na-pravnickou-fakultu-1-dil-3-vydani-n0054805/',
+        # 'prava 2.',
+        # 'jak se dostat na vs',
+        # 'zaklady spol ved 1.',
+    ]
+
+    PathSevt = {
+        'name'  : '//h1[contains(@itemprop, "name")]',
+        'url'   : '//span[contains(@class, "stock")]'
+    }
+
+    StockSevt = 'skladem'
 
 
 class bookstores:
     iBookstores = {
-        'Dobrovsky' : 'https://www.knihydobrovsky.cz/',
-        'Kosmas' : 'https://www.kosmas.cz/',
-        'Luxor' : 'https://www.luxor.cz/',
-        'Martinus' : 'https://www.martinus.cz/',
-        'Megaknihy' : 'https://www.megaknihy.cz/',
-        'ABZ' : 'https://knihy.abz.cz/',
-        'Knihcentrum' : 'https://www.knihcentrum.cz/',
-        'Knihy' : 'https://www.knihy.cz/',
+        'Dobrovsky'     : 'https://www.knihydobrovsky.cz/',
+        'Kosmas'        : 'https://www.kosmas.cz/',
+        'Luxor'         : 'https://www.luxor.cz/',
+        'Martinus'      : 'https://www.martinus.cz/',
+        'Megaknihy'     : 'https://www.megaknihy.cz/',
+        'ABZ'           : 'https://knihy.abz.cz/',
+        'Knihcentrum'   : 'https://www.knihcentrum.cz/',
+        'Knihy'         : 'https://www.knihy.cz/',
+        'Booktook'      : 'https://www.booktook.cz/',
+        'Sevt'          : 'https://www.sevt.cz/',
 
     }

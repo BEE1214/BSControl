@@ -13,15 +13,14 @@ def main():
     bot = bscontrol()
 
     # print('---------- Kosmas ----------')
-    # bot.WebPage(bookstores.iBookstores['Kosmas'])
-    # iKosmas = bot.KosSearch(books.iBooksKos, books.iRefsKos)
-    # if(iKosmas == []):
-    #     print('Vsechny knihy skladem')
-    # else:
-    #     bot.KosStock(iKosmas)
-    
+    # iKosSearch = bot.BookSearch(books.UrlKos, books.PathKos)
+    # iKosStock = bot.BookStock(iKosSearch, books.StockKos)
+    # bot.PrintBooks(iKosStock)
 
-    # print('---------- Dobrovsky ----------')
+    print('---------- Dobrovsky ----------')
+    iDobrovskySearch = bot.BookSearch(books.UrlDobr, books.PathDobr)
+    iDobrStock = bot.BookStock(iDobrovskySearch, books.StockDobr)
+    bot.PrintBooks(iDobrStock)
     # bot.WebPage(bookstores.iBookstores['Dobrovsky'])
     # iDobrovsky = bot.DobrSearch(books.iBooksDobr)
     # # iStock = bot.KosStock(books.iBooks, iTemp)
@@ -65,15 +64,21 @@ def main():
     # iKCSearch = bot.KCSearch(books.iBooks, books.iBooksKC)
     # bot.PrintBooks(bot.KCStock(books.iBooks, iKCSearch))
     
-    print('--------- Knihy ---------')
-    # needs to add url for all books
-    iKnihySearch = bot.BookSearch(books.UrlKnihy, books.PathKnihy)
-    iKnihyStock = bot.BookStock(iKnihySearch, books.StockKnihy)
-    bot.PrintBooks(iKnihyStock)
+    # print('--------- Knihy ---------')
+    # # needs to add url for all books
+    # iKnihySearch = bot.BookSearch(books.UrlKnihy, books.PathKnihy)
+    # iKnihyStock = bot.BookStock(iKnihySearch, books.StockKnihy)
+    # bot.PrintBooks(iKnihyStock)
 
-    print('--------- Booktook ---------')
-
+    # print('--------- Booktook ---------')
+    # iBTSearch = bot.BookSearch(books.UrlBT, books.PathBT)
+    # bot.PrintBooks(iBTSearch)
     # bot.PrintBooks(bot.ABZStock(books.iBooks, iABZSearch))
+    # in booktook needs to solve problem with xpath for books in stock and not in stock
+
+    # print('--------- sevt ---------')
+    # iSevtSearch = bot.BookSearch(books.UrlSevt, books.PathSevt)
+    # bot.PrintBooks(bot.BookStock(iSevtSearch, books.StockSevt))
 
 
     return 0

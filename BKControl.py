@@ -314,7 +314,7 @@ class bscontrol:
 
         for i in range(len(aUrl)):
             self.WebPage(aUrl[i])
-            iSearch.append(f'{self.driver.find_element_by_xpath(aPath["name"]).text}{self.driver.find_element_by_xpath(aPath["url"]).text}')
+            iSearch.append(f'{self.driver.find_element_by_xpath(aPath["name"]).text} - {self.driver.find_element_by_xpath(aPath["url"]).text}')
         return iSearch
 
     def BookStock(self, aBooks, aStock):
@@ -323,7 +323,7 @@ class bscontrol:
             aBooks - list of books with their stock status
             aStock - key word for stock option for different pages
         return:
-            iStock - list of books that aren't in stock
+            iStock - list of books not in stock
         """
         iStock = []
 
@@ -344,21 +344,6 @@ class bscontrol:
         for i in range(len(aStock)):
             print(aStock[i])
         pass
-
-    # def BookStock(self):
-    #     """ 
-    #     arg:
-    #         - aFind - list of books with their availability
-    #         - aBooks - list of books
-    #     return:
-    #         - iStock - list of books that are in stock
-    #     """
-
-    #     iBook = self.driver.find_element_by_xpath('//*[@id="snippet-bookDetail-availabilityInfo"]/div/div[1]/ul/li[1]/a/span[2]')
-    #     if (iBook.text == 'Skladem'):
-    #         return True
-    #     else:
-    #         return False
 
     def WebPage(self, aWebPage):
         # Reduce size of the window for complete program
