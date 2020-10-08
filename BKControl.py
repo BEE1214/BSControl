@@ -29,44 +29,6 @@ class bscontrol:
             self.driver.set_window_position(-1920,0)
             self.driver.set_window_size(1300, 1080)
 
-
-    
-# ================== ABZKnihy ========================
-    def ABZSearch(self, aBooks, aRefs):
-        iSearch = []
-
-        for i in range(len(aBooks)):
-            self.WebPage(aRefs[aBooks[i]])
-            iSearch.append(self.driver.find_element_by_xpath('//div[contains(@class, "prices_1_real")]').text)
-        return iSearch
-
-    def ABZStock(self, aBooks, aSearch):
-        iStock = []
-
-        for i in range(len(aBooks)):
-            if(aSearch[i].find('je skladem') == -1):
-                iStock.append(f'{aBooks[i]} - neni skladem')
-
-        return iStock
-
-# ================== Knihcentrum =====================
-    def KCSearch(self, aBooks, aRefs):
-        iSearch = []
-
-        for i in range(len(aBooks)):
-            self.WebPage(aRefs[aBooks[i]])
-            iSearch.append(self.driver.find_element_by_xpath('//span[contains(@class, "stock-name")]').text)
-        return iSearch
-
-    def KCStock(self, aBooks, aSearch):
-        iStock = []
-
-        for i in range(len(aBooks)):
-            if(aSearch[i].find('IHNED odesíláme') == -1) and (aSearch[i].find('poslední kusy') == -1):
-                iStock.append(f'{aBooks[i]} - neni skladem')
-
-        return iStock
-
 # ===================== BookSearch ========================
     def BookSearch(self, aUrl, aPath):
         """

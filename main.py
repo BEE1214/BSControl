@@ -34,17 +34,15 @@ def main():
     # iMarStock = bot.BookStock(iMarSearch, books.StockMar)
     # bot.PrintBooks(iMarStock)
 
-    print('--------- Megaknihy ---------')
-    iMKSearch = bot.BookSearch(books.UrlMK, books.PathMK)
-    iMKStock = bot.BookStock(iMKSearch, books.StockMK)
-    bot.PrintBooks(iMKStock)
-    # iMKSearch = bot.MKSearch(books.iBooks, books.iBooksMK)
-    # iMKStock = bot.MKStock(books.iBooks, iMKSearch)
+    # print('--------- Megaknihy ---------')
+    # iMKSearch = bot.BookSearch(books.UrlMK, books.PathMK)
+    # iMKStock = bot.BookStock(iMKSearch, books.StockMK)
     # bot.PrintBooks(iMKStock)
 
     # print('--------- ABZKnihy ---------')
-    # iABZSearch = bot.ABZSearch(books.iBooks, books.iBooksABZ)
-    # bot.PrintBooks(bot.ABZStock(books.iBooks, iABZSearch))
+    # iABZSearch = bot.BookSearch(books.UrlABZ, books.PathABZ)
+    # iABZStock = bot.BookStock(iABZSearch, books.StockABZ)
+    # bot.PrintBooks(iABZStock)
 
     # print('--------- Knihcentrum ---------')
     # iKCSearch = bot.KCSearch(books.iBooks, books.iBooksKC)
@@ -66,6 +64,11 @@ def main():
     # iSevtSearch = bot.BookSearch(books.UrlSevt, books.PathSevt)
     # bot.PrintBooks(bot.BookStock(iSevtSearch, books.StockSevt))
 
+    print('--------- DumKnihy ---------')
+    iDKSearch = bot.BookSearch(books.UrlDK, books.PathDK)
+    iDKStock = bot.BookStock(iDKSearch, books.StockDK)
+    bot.PrintBooks(iDKStock)
+    # "Jak se dostat na vysokou skolu" is missing in list
 
     return 0
 

@@ -23,7 +23,7 @@ class books:
         'Základy společenských věd - 1. díl',
     ]
 
-# ----------- Dobrovsky ----------------
+# ----------- Dobrovsky -------------- #
     UrlDobr = [
         'https://www.knihydobrovsky.cz/kniha/studijni-predpoklady-a-zaklady-logiky-1-dil-13656514',
         'https://www.knihydobrovsky.cz/kniha/testy-obecnych-studijnich-predpokladu-a-zaklady-logiky-2-dil-22193474',
@@ -49,7 +49,7 @@ class books:
 
     StockDobr = 'Skladem'
 
-# ----------- Kosmas ----------------
+# ------------ Kosmas ---------------- #
     UrlKos = [
         'https://www.kosmas.cz/knihy/231633/studijni-predpoklady-a-zaklady-logiky-1.-dil/',
         'https://www.kosmas.cz/knihy/231623/studijni-predpoklady-a-zaklady-logiky-2.-dil/',
@@ -90,7 +90,7 @@ class books:
         'jak-se-dostat-na-vysokou-skolu',
     ]
 
-# ----------- Luxor ----------------
+# ------------ Luxor ----------------- #
     UrlLux = [
         'https://www.luxor.cz/product/studijni-predpoklady-a-zaklady-logiky-1-dil-zbo000198618',
         'https://www.luxor.cz/product/studijni-predpoklady-a-zaklady-logiky-2-dil-zbo000198619',
@@ -115,7 +115,7 @@ class books:
 
     StockLux = 'SKLADEM'
 
-# ---------- Martinus -------------
+# ----------- Martinus --------------- #
     UrlMar = [
         'https://www.martinus.cz/?uItem=269503',
         'https://www.martinus.cz/?uItem=272399',
@@ -144,7 +144,7 @@ class books:
     # //*[@id="web"]/article/div[2]
     # //*[@id="web"]/article/div[2]
 
-# ---------- Megaknihy -------------
+# ---------- Megaknihy --------------- #
     iBooksMK = {
         'Studijní předpoklady a základy logiky - 1.'            : 'https://www.megaknihy.cz/ostatni/267298-studijni-predpoklady-a-zaklady-logiky-1-dil.html?search_pos=1',
         'Studijní předpoklady a základy logiky - 2.'            : 'https://www.megaknihy.cz/maturita-prijimacky/268969-testy-obecnych-studijnich-predpokladu-a-zaklady-logiky-2-dil.html?block=edition&position=2',
@@ -185,7 +185,8 @@ class books:
     }
 
     StockMK = 'máme skladem'
-# ---------- ABZKnihy -------------
+
+# ---------- ABZKnihy ---------------- #
     iBooksABZ = {
         'Studijní předpoklady a základy logiky - 1.'            : 'https://knihy.abz.cz/prodej/studijni-predpoklady-a-zaklady-logiky-1-dil-teorie-a-priklady',
         'Studijní předpoklady a základy logiky - 2.'            : 'https://knihy.abz.cz/prodej/testy-obecnych-studijnich-predpokladu-a-zaklady-logiky-2-dil',
@@ -203,7 +204,31 @@ class books:
         'Základy společenských věd - 1. díl'                    : 'https://knihy.abz.cz/prodej/zaklady-spolecenskych-ved-i-dil-1',
     }
 
-# ---------- Knihcentrum -------------
+    UrlABZ = [
+        'https://knihy.abz.cz/prodej/studijni-predpoklady-a-zaklady-logiky-1-dil-teorie-a-priklady',
+        'https://knihy.abz.cz/prodej/testy-obecnych-studijnich-predpokladu-a-zaklady-logiky-2-dil',
+        'https://knihy.abz.cz/prodej/chcete-se-dostat-na-lekarskou-fakultu-1-dil-chemie-220-otazek-a-z-prijimacich-zkousek-s-resenim',
+        'https://knihy.abz.cz/prodej/chcete-se-dostat-na-lekarskou-fakultu-biologie-2-dil',
+        'https://knihy.abz.cz/prodej/chcete-se-dostat-na-lekarskou-fakultu-3-dil',
+        'https://knihy.abz.cz/prodej/chcete-se-dostat-na-lekarskou-fakultu-4-dil-cvicebnice-testovych-otazek',
+        'https://knihy.abz.cz/prodej/chcete-se-dostat-na-fakultu-socialnich-studii-ved-psychologie-a-sociologie-filozofie-a-politicka-filozofie-politologie',
+        'https://knihy.abz.cz/prodej/chcete-se-dostat-na-vysokou-skolu-anglictina-500-testovych-otazek-z-prijimacich-zkousek-s-resenim',
+        'https://knihy.abz.cz/prodej/chcete-se-dostat-na-vysokou-skolu-nemcina',
+        'https://knihy.abz.cz/prodej/chcete-se-dostat-na-ekonomickou-fakultu-1-dil',
+        'https://knihy.abz.cz/prodej/chcete-se-dostat-na-pravnickou-fakultu-1-dil-2-vydani',
+        'https://knihy.abz.cz/prodej/chcete-se-dostat-na-pravnickou-fakultu-2-dil-1',
+        'https://knihy.abz.cz/prodej/jak-se-dostat-na-vysokou-skolu',
+        'https://knihy.abz.cz/prodej/zaklady-spolecenskych-ved-i-dil-1',
+    ]
+
+    PathABZ = {
+        'name'  : '//*[@id="content_part"]/div[2]/article/div/h2/span[1]',
+        'url'   : '//span[contains(@class, "dostupnost")]',
+    }
+
+    StockABZ = 'skladem'
+
+# --------- Knihcentrum -------------- #
     iBooksKC = {
         'Studijní předpoklady a základy logiky - 1.'                : 'https://www.knihcentrum.cz/studijni-predpoklady-a-zaklady-logiky-1dil',
         'Studijní předpoklady a základy logiky - 2.'                : 'https://www.knihcentrum.cz/studijni-predpoklady-a-zaklady-logiky-2-dil',
@@ -221,7 +246,7 @@ class books:
         'Základy společenských věd - 1. díl'                        : 'https://www.knihcentrum.cz/zaklady-spolecenskych-ved-i-1',
     }
 
-# ---------- Knihy -------------
+# ------------ Knihy ----------------- #
     UrlKnihy = [
         'https://www.knihy.cz/studijni-predpoklady-a-zaklady-logiky-1-dil/',
         'https://www.knihy.cz/studijni-predpoklady-a-zaklady-logiky-2-dil/',
@@ -246,7 +271,7 @@ class books:
 
     StockKnihy = 'Skladem 5+ ks'
 
-# ------------ BookTook --------------
+# ----------- BookTook --------------- #
     UrlBT = [
         'https://www.booktook.cz/p/testy-obecnych-studijnich-predpokladu-a-zaklady-logiky-1-dil-9788086572802/', # 11. editon
         'https://www.booktook.cz/p/testy-obecnych-studijnich-predpokladu-a-zaklady-logiky-2-dil/',
@@ -261,7 +286,8 @@ class books:
     }
 
     StockBT = 'Skladem'
-# --------------- sevt ---------------
+
+# ------------- sevt ----------------- #
     UrlSevt = [
         'https://www.sevt.cz/produkt/studijni-predpoklady-a-zaklady-logiky-1-dil-724l15349065/',
         # 'zaklady logiky 2',
@@ -285,6 +311,31 @@ class books:
     }
 
     StockSevt = 'skladem'
+
+# ---------- DumKnihy ---------------- #
+    UrlDK = [
+        'https://www.dumknihy.cz/studijni-predpoklady-a-zaklady-logiky-1-dil',
+        'https://www.dumknihy.cz/studijni-predpoklady-a-zaklady-logiky-2-dil',
+        'https://www.dumknihy.cz/svetske-kanony-duchovni-kanony',
+        'https://www.dumknihy.cz/chcete-se-dostat-na-lekarskou-fakultu-109980',
+        'https://www.dumknihy.cz/chcete-se-dostat-na-lekarskou-fakultu-fyzika-3-dil',
+        'https://www.dumknihy.cz/chcete-se-dostat-na-lekarskou-fakultu-113058',
+        'https://www.dumknihy.cz/chcete-se-dostat-na-fakultu-socialnich-studii-ved-2-dil-136012',
+        'https://www.dumknihy.cz/chcete-se-dostat-na-vysokou-skolu',
+        'https://www.dumknihy.cz/chcete-se-dostat-na-vysokou-skolu-74409',
+        'https://www.dumknihy.cz/chcete-se-dostat-na-ekonomickou-fakultu-78506',
+        'https://www.dumknihy.cz/chcete-se-dostat-na-pravnickou-fakultu-1-dil-90124',
+        'https://www.dumknihy.cz/chcete-se-dostat-na-pravnickou-fakultu-2-dil-140074',
+        # '',
+        'https://www.dumknihy.cz/zaklady-spolecenskych-ved-i-dil-137766',
+    ]
+
+    PathDK = {
+        'name'  : '//*[@id="breadcrumbs"]/p',
+        'url'   : '//p[contains(@class, "availability yes")]'
+    }
+
+    StockDK = 'je skladem'
 
 
 class bookstores:
