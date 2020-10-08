@@ -23,23 +23,7 @@ class books:
         'Základy společenských věd - 1. díl',
     ]
 
-    # ----------- Dobrovsky ----------------
-    iBooksDobr = [
-        'Studijní předpoklady a základy logiky - 1.',
-        'Studijní předpoklady a základy logiky - 2.',
-        'Chcete se dostat na lékařskou fakultu? 1.',
-        'Chcete se dostat na lékařskou fakultu? 2.',
-        'Chcete se dostat na lékařskou fakultu? 3.',
-        'Chcete se dostat na lékařskou fakultu?',
-        'Chcete se dostat na fakultu sociálních studií (věd)?',
-        'Chcete se dostat na vysokou školu? Angličtina',
-        'Chcete se dostat na VŠ? Němčina',
-        'Chcete se dostat na ekonomickou fakultu 1.díl',
-        'Chcete se dostat na právnickou fakultu? 1',
-        'Chcete se dostat na právnickou fakultu? 2',
-        'Jak se dostat na vysokou školu?',
-    ]
-
+# ----------- Dobrovsky ----------------
     UrlDobr = [
         'https://www.knihydobrovsky.cz/kniha/studijni-predpoklady-a-zaklady-logiky-1-dil-13656514',
         'https://www.knihydobrovsky.cz/kniha/testy-obecnych-studijnich-predpokladu-a-zaklady-logiky-2-dil-22193474',
@@ -65,23 +49,7 @@ class books:
 
     StockDobr = 'Skladem'
 
-    # ----------- Kosmas ----------------
-    iBooksKos = [
-        'Studijní předpoklady a základy logiky 1.',
-        'Studijní předpoklady a základy logiky - 2.',
-        'Chcete se dostat na lékařskou fakultu 1.',
-        'Chcete se dostat na lékařskou fakultu 2.',
-        'Chcete se dostat na lékařskou fakultu 3.',
-        'Chcete se dostat na lékařskou fakultu 4.',
-        'Chcete se dostat na fakultu sociálních studií',
-        'Chcete se dostat na vysokou školu angličtina',
-        'Chcete se dostat na VŠ němčina',
-        'Chcete se dostat na ekonomickou fakultu 1.díl',
-        'Chcete se dostat na právnickou fakultu 1',
-        'Chcete se dostat na právnickou fakultu 2',
-        'Jak se dostat na vysokou školu',
-    ]
-
+# ----------- Kosmas ----------------
     UrlKos = [
         'https://www.kosmas.cz/knihy/231633/studijni-predpoklady-a-zaklady-logiky-1.-dil/',
         'https://www.kosmas.cz/knihy/231623/studijni-predpoklady-a-zaklady-logiky-2.-dil/',
@@ -122,39 +90,7 @@ class books:
         'jak-se-dostat-na-vysokou-skolu',
     ]
 
-    # ----------- Luxor ----------------
-    iBooksLux = [
-        'Studijní předpoklady a základy logiky 1.',
-        'Studijní předpoklady a základy logiky - 2.',
-        'Chcete se dostat na lékařskou fakultu 1.',
-        'Chcete se dostat na lékařskou fakultu 2.',
-        'Chcete se dostat na lékařskou fakultu 3.',
-        'Chcete se dostat na lékařskou fakultu 4.',
-        'Chcete se dostat na fakultu sociálních studií',
-        'Chcete se dostat na vysokou školu angličtina',
-        'Chcete se dostat na VŠ němčina',
-        'Chcete se dostat na ekonomickou fakultu 1.díl',
-        'Chcete se dostat na právnickou fakultu 1',
-        'Chcete se dostat na právnickou fakultu 2',
-        'Jak se dostat na vysokou školu',
-    ]
-
-    iRefsLux = {
-        'Studijní předpoklady a základy logiky 1.'      : 'https://www.luxor.cz/product/studijni-predpoklady-a-zaklady-logiky-1-dil-zbo000198618',
-        'Studijní předpoklady a základy logiky - 2.'    : 'https://www.luxor.cz/product/studijni-predpoklady-a-zaklady-logiky-2-dil-zbo000198619',
-        'Chcete se dostat na lékařskou fakultu 1.'      : 'https://www.luxor.cz/product/chcete-se-dostat-na-lekarskou-fakultu-zbo000198614',
-        'Chcete se dostat na lékařskou fakultu 2.'      : 'https://www.luxor.cz/product/chcete-se-dostat-na-lekarskou-fakultu-2-dil-zbo000198608',
-        'Chcete se dostat na lékařskou fakultu 3.'      : 'https://www.luxor.cz/product/chcete-se-dostat-na-lekarskou-fakultu-3-dil-fyzika-zbo000198615',
-        'Chcete se dostat na lékařskou fakultu 4.'      : 'https://www.luxor.cz/product/chcete-se-dostat-na-lekarskou-fakultu-4-dil-zbo000198607',
-        'Chcete se dostat na fakultu sociálních studií' : 'https://www.luxor.cz/product/chcete-se-dostat-na-fakultu-socialnich-studii-ved-zbo000198612',
-        'Chcete se dostat na vysokou školu angličtina'  : 'https://www.luxor.cz/product/chcete-se-dostat-na-vysokou-skolu-anglictina-zbo000198603',
-        'Chcete se dostat na VŠ němčina'                : 'https://www.luxor.cz/product/chcete-se-dostat-na-vysokou-skolu-nemcina-zbo000198596',
-        'Chcete se dostat na ekonomickou fakultu 1.díl' : 'https://www.luxor.cz/product/chcete-se-dostat-na-ekon-fak-1-dil-matematika-zbo000198598',
-        'Chcete se dostat na právnickou fakultu 1'      : 'https://www.luxor.cz/product/chcete-se-dostat-na-pravnickou-fakultu-zbo000198604',
-        'Chcete se dostat na právnickou fakultu 2'      : 'https://www.luxor.cz/product/chcete-se-dostat-na-pravnickou-fakultu-2-dil-vseobecny-prehled-a-zaklady-pra-zbo000198611',
-        'Jak se dostat na vysokou školu'                : 'https://www.luxor.cz/product/jak-se-dostat-na-vysokou-skolu-zbo000198595',
-    }
-
+# ----------- Luxor ----------------
     UrlLux = [
         'https://www.luxor.cz/product/studijni-predpoklady-a-zaklady-logiky-1-dil-zbo000198618',
         'https://www.luxor.cz/product/studijni-predpoklady-a-zaklady-logiky-2-dil-zbo000198619',
@@ -179,28 +115,36 @@ class books:
 
     StockLux = 'SKLADEM'
 
-    # ---------- Martinus -------------
-    iBooksMar=[
-        'Studijní předpoklady a základy logiky 1 (Chcete se dostat na vysokou školu?)',
-        'Studijní předpoklady a základy logiky 2. díl',
-        'Chcete se dostat na lékařskou fakultu? 1.',
-        'Chcete se dostat na lékařskou fakultu (2. díl - Biológie)',
-        'Chcete se dostat na lékařskou fakultu? (Fyzika)',
-        'Chcete se dostat na lékařskou fakultu? - 4.díl (Biologie, fyzika, chemie)',
-        'Chcete se dostat na fakultu sociálních studií (věd)?',
-        'Chcete se dostat na vysokou školu? Nemčina',
-        'Chcete se dostat na ekonomickou fakultu 1.díl - Matematika',
-        'Chcete se dostat na právnickou fakultu 2.díl - Cvičebnice',
-        'Jak se dostat na VŠ? (Podrobný průvodce přijímacím řízením)',
-        'Základy společenských věd - I. díl - 2. vydání',
+# ---------- Martinus -------------
+    UrlMar = [
+        'https://www.martinus.cz/?uItem=269503',
+        'https://www.martinus.cz/?uItem=272399',
+        'https://www.martinus.cz/?uItem=126108',
+        'https://www.martinus.cz/?uItem=107528',
+        'https://www.martinus.cz/?uItem=347825',
+        'https://www.martinus.cz/?uItem=103364',
+        'https://www.martinus.cz/?uItem=397501',
+        'https://www.martinus.cz/?uItem=67118',
+        'https://www.martinus.cz/?uItem=416793',
+        'https://www.martinus.cz/?uItem=46125',
+        'https://www.martinus.cz/?uItem=63128',
+        'https://www.martinus.cz/?uItem=46128',
+        'https://www.martinus.cz/?uItem=128682',
+        'https://www.martinus.cz/?uItem=422595',
     ]
 
-    iBooksMarDic=[
-       'https://www.martinus.cz/?uItem=67118',
-       'https://www.martinus.cz/?uItem=63128',
-    ]
+    PathMar = {
+        'name'  : '//h1[contains(@class, "product-detail__title mb-small")]',
+        'url'   : '//*[@id="web"]/article/div[2]', 
+    }
 
-    # ---------- Megaknihy -------------
+    StockMar = 'Na skladě'
+
+    # //*[@id="web"]/article/div[2]
+    # //*[@id="web"]/article/div[2]
+    # //*[@id="web"]/article/div[2]
+
+# ---------- Megaknihy -------------
     iBooksMK = {
         'Studijní předpoklady a základy logiky - 1.'            : 'https://www.megaknihy.cz/ostatni/267298-studijni-predpoklady-a-zaklady-logiky-1-dil.html?search_pos=1',
         'Studijní předpoklady a základy logiky - 2.'            : 'https://www.megaknihy.cz/maturita-prijimacky/268969-testy-obecnych-studijnich-predpokladu-a-zaklady-logiky-2-dil.html?block=edition&position=2',
@@ -218,7 +162,30 @@ class books:
         'Základy společenských věd - 1. díl'                    : 'https://www.megaknihy.cz/cizi-jazyky/150910-zaklady-spolecenskych-ved-i-dil-2-vydani.html?search_pos=1'
     }
 
-    # ---------- ABZKnihy -------------
+    UrlMK = [
+        'https://www.megaknihy.cz/ostatni/267298-studijni-predpoklady-a-zaklady-logiky-1-dil.html',
+        'https://www.megaknihy.cz/maturita-prijimacky/268969-testy-obecnych-studijnich-predpokladu-a-zaklady-logiky-2-dil.html?block=edition&position=2',
+        'https://www.megaknihy.cz/cizi-jazyky/140214-chcete-se-dostat-na-lekarskou-fakultu-chemie-1-dil-3-vydani.html',
+        'https://www.megaknihy.cz/cizi-jazyky/95132-chcete-se-dostat-na-lekarskou-fakultu-2-dil.html?block=edition&position=1',
+        'https://www.megaknihy.cz/cizi-jazyky/149616-chcete-se-dostat-na-lekarskou-fakultu-fyzika-3-dil-3-vydani.html?block=edition&position=4',
+        'https://www.megaknihy.cz/stredni-skola/95133-chcete-se-dostat-na-lekarskou-fakultu-4-dil-biologie-fyzika-chemie.html?block=edition&position=2',
+        'https://www.megaknihy.cz/cizi-jazyky/145060-chcete-se-dostat-na-fakultu-socialnich-studii-ved.html?search_pos=1',
+        'https://www.megaknihy.cz/cizi-jazyky/57164-chcete-se-dostat-na-vysokou-skolu-anglictina.html?block=related&position=11',
+        'https://www.megaknihy.cz/cizi-jazyky/42750-chcete-se-dostat-na-vysokou-skolu-nemcina.html',
+        'https://www.megaknihy.cz/cizi-jazyky/50493-chcete-se-dostat-na-ekonomickou-fakultu-1-dil.html',
+        'https://www.megaknihy.cz/cizi-jazyky/57167-chcete-se-dostat-na-pravnickou-fakultu.html',
+        'https://www.megaknihy.cz/cizi-jazyky/129347-chcete-se-dostat-na-pravnickou-fakultu-2-dil.html?block=edition&position=2',
+        'https://www.megaknihy.cz/cizi-jazyky/46834-jak-se-dostat-na-vysokou-skolu.html',
+        'https://www.megaknihy.cz/cizi-jazyky/150910-zaklady-spolecenskych-ved-i-dil-2-vydani.html',
+    ]
+
+    PathMK = {
+        'name'  : '//span[contains(@itemprop, "name")]',
+        'url'   : '//span[contains(@class, "avail_now_text")]',
+    }
+
+    StockMK = 'máme skladem'
+# ---------- ABZKnihy -------------
     iBooksABZ = {
         'Studijní předpoklady a základy logiky - 1.'            : 'https://knihy.abz.cz/prodej/studijni-predpoklady-a-zaklady-logiky-1-dil-teorie-a-priklady',
         'Studijní předpoklady a základy logiky - 2.'            : 'https://knihy.abz.cz/prodej/testy-obecnych-studijnich-predpokladu-a-zaklady-logiky-2-dil',
@@ -236,7 +203,7 @@ class books:
         'Základy společenských věd - 1. díl'                    : 'https://knihy.abz.cz/prodej/zaklady-spolecenskych-ved-i-dil-1',
     }
 
-    # ---------- Knihcentrum -------------
+# ---------- Knihcentrum -------------
     iBooksKC = {
         'Studijní předpoklady a základy logiky - 1.'                : 'https://www.knihcentrum.cz/studijni-predpoklady-a-zaklady-logiky-1dil',
         'Studijní předpoklady a základy logiky - 2.'                : 'https://www.knihcentrum.cz/studijni-predpoklady-a-zaklady-logiky-2-dil',
@@ -254,7 +221,7 @@ class books:
         'Základy společenských věd - 1. díl'                        : 'https://www.knihcentrum.cz/zaklady-spolecenskych-ved-i-1',
     }
 
-    # ---------- Knihy -------------
+# ---------- Knihy -------------
     UrlKnihy = [
         'https://www.knihy.cz/studijni-predpoklady-a-zaklady-logiky-1-dil/',
         'https://www.knihy.cz/studijni-predpoklady-a-zaklady-logiky-2-dil/',
@@ -279,7 +246,7 @@ class books:
 
     StockKnihy = 'Skladem 5+ ks'
 
-    # ------------ BookTook --------------
+# ------------ BookTook --------------
     UrlBT = [
         'https://www.booktook.cz/p/testy-obecnych-studijnich-predpokladu-a-zaklady-logiky-1-dil-9788086572802/', # 11. editon
         'https://www.booktook.cz/p/testy-obecnych-studijnich-predpokladu-a-zaklady-logiky-2-dil/',
@@ -294,7 +261,7 @@ class books:
     }
 
     StockBT = 'Skladem'
-    # --------------- sevt ---------------
+# --------------- sevt ---------------
     UrlSevt = [
         'https://www.sevt.cz/produkt/studijni-predpoklady-a-zaklady-logiky-1-dil-724l15349065/',
         # 'zaklady logiky 2',

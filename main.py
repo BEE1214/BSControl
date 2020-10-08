@@ -30,27 +30,25 @@ def main():
 
 
     # print('---------- Martinus ----------')
-    # bot.WebPage(bookstores.iBookstores['Martinus'])
-    # iMartinus = bot.MarSearch(books.iBooksMar)
-    # iMartinus = bot.MarUrl(books.iBooksMarDic, iMartinus)
-    # iMarStock = bot.MarStock(books.iBooksMar, iMartinus)
-    # if (iMarStock == []) :
-    #     print('Vsechny knihy skladem')
-    # else :
-    #     bot.PrintBooks(iMarStock)
+    # iMarSearch = bot.BookSearch(books.UrlMar, books.PathMar)
+    # iMarStock = bot.BookStock(iMarSearch, books.StockMar)
+    # bot.PrintBooks(iMarStock)
 
     print('--------- Megaknihy ---------')
-    iMKSearch = bot.MKSearch(books.iBooks, books.iBooksMK)
-    iMKStock = bot.MKStock(books.iBooks, iMKSearch)
+    iMKSearch = bot.BookSearch(books.UrlMK, books.PathMK)
+    iMKStock = bot.BookStock(iMKSearch, books.StockMK)
     bot.PrintBooks(iMKStock)
+    # iMKSearch = bot.MKSearch(books.iBooks, books.iBooksMK)
+    # iMKStock = bot.MKStock(books.iBooks, iMKSearch)
+    # bot.PrintBooks(iMKStock)
 
-    print('--------- ABZKnihy ---------')
-    iABZSearch = bot.ABZSearch(books.iBooks, books.iBooksABZ)
-    bot.PrintBooks(bot.ABZStock(books.iBooks, iABZSearch))
+    # print('--------- ABZKnihy ---------')
+    # iABZSearch = bot.ABZSearch(books.iBooks, books.iBooksABZ)
+    # bot.PrintBooks(bot.ABZStock(books.iBooks, iABZSearch))
 
-    print('--------- Knihcentrum ---------')
-    iKCSearch = bot.KCSearch(books.iBooks, books.iBooksKC)
-    bot.PrintBooks(bot.KCStock(books.iBooks, iKCSearch))
+    # print('--------- Knihcentrum ---------')
+    # iKCSearch = bot.KCSearch(books.iBooks, books.iBooksKC)
+    # bot.PrintBooks(bot.KCStock(books.iBooks, iKCSearch))
     
     # print('--------- Knihy ---------')
     # # needs to add url for all books
