@@ -337,6 +337,31 @@ class books:
 
     StockDK = 'je skladem'
 
+# ----------- Ladvi ------------------ #
+    UrlLadvi = [
+        # studijni predpoklady 1
+        # studijni predpoklady 2
+        'https://www.knihkupectvi-ladvi.cz/chcete-se-dostat-na-lekarskou-fakultu-p50740/',
+        'https://www.knihkupectvi-ladvi.cz/chcete-se-dostat-na-lekarskou-fakultu-biologie-2-dil-3-vydani-p33520/',
+        'https://www.knihkupectvi-ladvi.cz/chcete-se-dostat-na-lekarskou-fakultu-fyzika-3-dil-3-vydani-p61020/',
+        'https://www.knihkupectvi-ladvi.cz/chcete-se-dostat-na-lekarskou-fakultu-4-dil-p45384/',
+        'https://www.knihkupectvi-ladvi.cz/chcete-se-dostat-na-fakultu-socialnich-studii-ved-p43584/',
+        'https://www.knihkupectvi-ladvi.cz/chcete-se-dostat-na-vysokou-skolu-p13118/',
+        'https://www.knihkupectvi-ladvi.cz/chcete-se-dostat-na-vysokou-skolu-nemcina-p6170/',
+        'https://www.knihkupectvi-ladvi.cz/chcete-se-dostat-na-ekonomickou-fakultu-1-dil-p5925/',
+        'https://www.knihkupectvi-ladvi.cz/chcete-se-dostat-na-pravnickou-fakultu-1-dil-3-vydani-p13819/',
+        'https://www.knihkupectvi-ladvi.cz/chcete-se-dostat-na-pravnickou-fakultu-3-dil-p45385/',
+        'https://www.knihkupectvi-ladvi.cz/jak-se-dostat-na-vysokou-skolu-p5924/',
+        'https://www.knihkupectvi-ladvi.cz/zaklady-spolecenskych-ved-i-dil-2-vydani-p63667/',
+    ]
+
+    PathLadvi = {
+        'name'  : '//h1[contains(@class, "HeadingView v2a v2 Heading")]',
+        'url'   : '//span[contains(@class, "label")]'
+    }
+
+    StockLadvi = 'Skladem'
+
 
 class bookstores:
     iBookstores = {

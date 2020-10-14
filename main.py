@@ -64,11 +64,17 @@ def main():
     # iSevtSearch = bot.BookSearch(books.UrlSevt, books.PathSevt)
     # bot.PrintBooks(bot.BookStock(iSevtSearch, books.StockSevt))
 
-    print('--------- DumKnihy ---------')
-    iDKSearch = bot.BookSearch(books.UrlDK, books.PathDK)
-    iDKStock = bot.BookStock(iDKSearch, books.StockDK)
-    bot.PrintBooks(iDKStock)
+    # print('--------- DumKnihy ---------')
+    # iDKSearch = bot.BookSearch(books.UrlDK, books.PathDK)
+    # iDKStock = bot.BookStock(iDKSearch, books.StockDK)
+    # bot.PrintBooks(iDKStock)
     # "Jak se dostat na vysokou skolu" is missing in list
+
+    print('--------- Ladvi ---------')
+    iLadviSearch = bot.BookSearch(books.UrlLadvi, books.PathLadvi)
+    iLadviStock = bot.BookStock(iLadviSearch, books.StockLadvi)
+    bot.PrintBooks(iLadviStock)
+
 
     return 0
 
