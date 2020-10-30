@@ -222,13 +222,38 @@ class books:
     ]
 
     PathABZ = {
-        'name'  : '//*[@id="content_part"]/div[2]/article/div/h2/span[1]',
+        'name'  : '//span[contains(@itemprop, "name")]',
+        # 'name'  : '//*[@id="content_part"]/div[2]/article/div/h2/span[1]',
         'url'   : '//span[contains(@class, "dostupnost")]',
     }
 
     StockABZ = 'skladem'
 
 # --------- Knihcentrum -------------- #
+    UrlKC = [
+        'https://www.knihcentrum.cz/studijni-predpoklady-a-zaklady-logiky-1dil',
+        'https://www.knihcentrum.cz/studijni-predpoklady-a-zaklady-logiky-2-dil',
+        'https://www.knihcentrum.cz/chcete-se-dostat-na-lekarskou-fakultu-1',
+        'https://www.knihcentrum.cz/chcete-se-dostat-na-lekarskou-fakultu-2dil-2',
+        'https://www.knihcentrum.cz/chcete-se-dostat-na-lekarskou-fakultu-3dil-2',
+        'https://www.knihcentrum.cz/chcete-se-dostat-na-lekarskou-fakultu-3dil-2',
+        'https://www.knihcentrum.cz/chcete-se-dostat-na-fakultu-socialnich-studii-ved-2-dil',
+        'https://www.knihcentrum.cz/chcete-se-dostat-na-vysokou-skolu-anglictina-1',
+        'https://www.knihcentrum.cz/chcete-se-dostat-na-vysokou-skolu-nemcina',
+        'https://www.knihcentrum.cz/chcete-se-dostat-na-ekonomickou-fakultu-1dil',
+        'https://www.knihcentrum.cz/chcete-se-dostat-na-pravnickou-fakultu-3',
+        'https://www.knihcentrum.cz/chcete-se-dostat-na-pravnickou-fakultu-2-dil',
+        'https://www.knihcentrum.cz/chcete-se-dostat-na-vysokou-skolu-nemcina',
+        'https://www.knihcentrum.cz/zaklady-spolecenskych-ved-i-1',
+    ]
+
+    PathKC = {
+        'name'  : '//h1[contains(@itemprop, "name")]',
+        'url'   : '//span[contains(@class, "stock-name")]',
+    }
+
+    StockKC = 'IHNED odesíláme'
+
     iBooksKC = {
         'Studijní předpoklady a základy logiky - 1.'                : 'https://www.knihcentrum.cz/studijni-predpoklady-a-zaklady-logiky-1dil',
         'Studijní předpoklady a základy logiky - 2.'                : 'https://www.knihcentrum.cz/studijni-predpoklady-a-zaklady-logiky-2-dil',
@@ -250,22 +275,22 @@ class books:
     UrlKnihy = [
         'https://www.knihy.cz/studijni-predpoklady-a-zaklady-logiky-1-dil/',
         'https://www.knihy.cz/studijni-predpoklady-a-zaklady-logiky-2-dil/',
-        # '',
-        # '',
+        # '', # lekarska 1
+        # '', # lekarska 2
         'https://www.knihy.cz/chcete-se-dostat-na-lekarskou-fakultu-3-dil/',
         'https://www.knihy.cz/chcete-se-dostat-na-lekarskou-fakultu-4-dil/',
-        # '',
-        # '',
-        # '',
-        # '',
-        # '',
-        # '',
-        # '',
-        # '',
+        # '', # socialni
+        # '', # anglictina
+        # '', # nemcina
+        # '', # ekonomicka
+        # '', # pravnicka 1
+        # '', # pravnicka 2
+        # '', # vysoka
+        # '', # zaklady spol ved
     ]
 
     PathKnihy = {
-        'name'  : '//h1[contains(@class, "box-detail__info__title box-detail__info__title--with-authors")]',
+        'name'  : '//h1[contains(@class, "box-detail__info__title")]',
         'url'   : '//div[contains(@class, "box-detail__info__availability box-detail__info__availability--code-inStock")]'
     }
 
@@ -361,6 +386,33 @@ class books:
     }
 
     StockLadvi = 'Skladem'
+
+# ---------- Ucebnice.cz -------------- #
+    UrlUce = [
+        'https://www.ucebnice.cz/ostatni/267298-studijni-predpoklady-a-zaklady-logiky-1-dil.html',
+        'https://www.ucebnice.cz/maturita-prijimacky/268969-testy-obecnych-studijnich-predpokladu-a-zaklady-logiky-2-dil.html',
+        'https://www.ucebnice.cz/cizi-jazyky/140214-chcete-se-dostat-na-lekarskou-fakultu-chemie-1-dil-3-vydani.html',
+        'https://www.ucebnice.cz/cizi-jazyky/95132-chcete-se-dostat-na-lekarskou-fakultu-2-dil.html',
+        'https://www.ucebnice.cz/cizi-jazyky/149616-chcete-se-dostat-na-lekarskou-fakultu-fyzika-3-dil-3-vydani.html',
+        'https://www.ucebnice.cz/stredni-skola/95133-chcete-se-dostat-na-lekarskou-fakultu-4-dil.html',
+        'https://www.ucebnice.cz/cizi-jazyky/145060-chcete-se-dostat-na-fakultu-socialnich-studii-ved.html',
+        'https://www.ucebnice.cz/cizi-jazyky/57164-chcete-se-dostat-na-vysokou-skolu-anglictina.html',
+        'https://www.ucebnice.cz/cizi-jazyky/42750-chcete-se-dostat-na-vysokou-skolu-nemcina.html',
+        'https://www.ucebnice.cz/cizi-jazyky/50493-chcete-se-dostat-na-ekonomickou-fakultu-1-dil.html',
+        'https://www.ucebnice.cz/cizi-jazyky/57167-chcete-se-dostat-na-pravnickou-fakultu.html',
+        'https://www.ucebnice.cz/cizi-jazyky/129347-chcete-se-dostat-na-pravnickou-fakultu-2-dil.html',
+        'https://www.ucebnice.cz/cizi-jazyky/46834-jak-se-dostat-na-vysokou-skolu.html',
+        'https://www.ucebnice.cz/cizi-jazyky/46834-jak-se-dostat-na-vysokou-skolu.html',
+    ]
+
+
+    PathUce = {
+        'name'  : '//span[contains(@itemprop, "name")]',
+        'url'   : '//*[@id="pb-right-column"]/div[1]/div/div/div/strong',
+        # 'url'   : '//link[contains(@itemprop, "availability")]',
+    }
+
+    StockUce = 'skladem'
 
 
 class bookstores:

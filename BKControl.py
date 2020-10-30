@@ -13,14 +13,25 @@ from selenium.common.exceptions import TimeoutException
 from time import sleep
 
 class bscontrol:
+    """
+    Library for controling books in stock on certain bookstores
+    Dependencies:
+        - python 3.8.5
+        - selenium
+        On linux:
+            - Brave browser
+            - webdriver for chrome 84
+        On windows:
+            - Google Chrome or Chromium
+            - webdriver for actual version of Google chrome browser
+    """
     def __init__(self):
         if (system() == 'Linux'):
             self.options = Options()
             self.options.binary_location = '/usr/bin/brave'
             self.driver_path = '/usr/local/bin/chromedriver'
             self.driver = webdriver.Chrome(options = self.options,executable_path = self.driver_path)
-            self.driver.set_window_position(-1920,0)
-            self.driver.set_window_size(1300, 1080)
+            # self.driver.set_window_size(1300, 1080)
         elif (system() == 'Windows'):
             # self.options = Options()
             # self.options.binary_location = 'C:/Program Files (x86)/BraveSoftware/Brave-Browser/Application/brave.exe'
@@ -29,7 +40,7 @@ class bscontrol:
             self.driver.set_window_position(-1920,0)
             self.driver.set_window_size(1300, 1080)
 
-# ===================== BookSearch ========================
+# ===================== BookSearch ======================== #
     def BookSearch(self, aUrl, aPath):
         """
         arg:
@@ -50,6 +61,7 @@ class bscontrol:
                 print('Your internet is too much of a potato')
             try:
                 stock = self.driver.find_element_by_xpath(aPath["url"]).text
+                sleep(1)
                 iSearch.append(f'{name} - {stock}')
             except NoSuchElementException:
                 iSearch.append(f'{name} - neni skladem')
@@ -57,6 +69,7 @@ class bscontrol:
                 print('Your internet is too much of a potato')
         return iSearch
 
+# ===================== BookStock ========================= #
     def BookStock(self, aBooks, aStock):
         """
         arg:
@@ -77,6 +90,7 @@ class bscontrol:
         return iStock
 
 
+# ===================== PrintBook ======================== #
     def PrintBooks(self, aStock):
         """
         Simple list printing function.
@@ -84,7 +98,13 @@ class bscontrol:
         for i in range(len(aStock)):
             print(aStock[i])
         pass
+    
+# =================== BookFucntions ======================= #
+    def BSStock(self, aUrl, aPath, aStock):
+        iSearch = self.BookSearch(aUrl, aPath)
+        self.PrintBooks(self.BookStock(iSearch, aStock))
 
+# ==================== PageLookup ========================= #
     def WebPage(self, aWebPage):
         # Reduce size of the window for complete program
         # self.driver.set_window_size(100, 100)
