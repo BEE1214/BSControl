@@ -64,7 +64,7 @@ class bscontrol:
                 sleep(1)
                 iSearch.append(f'{name} - {stock}')
             except NoSuchElementException:
-                iSearch.append(f'{name} - neni skladem')
+                iSearch.append(f'{name} - neni na skladu')
             except TimeoutException:
                 print('Your internet is too much of a potato')
         return iSearch

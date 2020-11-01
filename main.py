@@ -51,8 +51,11 @@ def main():
     # print('--------- Ladvi ---------')
     # bot.BSStock(books.UrlLadvi, books.PathLadvi, books.StockLadvi)
 
-    print('-------- Ucebnice ---------')
-    bot.BSStock(books.UrlUce, books.PathUce, books.StockUce)
+    # print('-------- Ucebnice ---------')
+    # bot.BSStock(books.UrlUce, books.PathUce, books.StockUce)
+    
+    print('-------- Beletrie ---------')
+    bot.BSStock(books.UrlBel, books.PathBel, books.StockBel)
 
     return 0
 

@@ -414,6 +414,32 @@ class books:
 
     StockUce = 'skladem'
 
+# ---------- Beletrie -------------- #
+    UrlBel = [
+        'https://www.beletrie.eu/testy-obecnych-studijnich-predpokladu-a-zaklady-logiky-1-dil-p299139/',
+        'https://www.beletrie.eu/testy-obecnych-studijnich-predpokladu-a-zaklady-logiky-2-dil-p303528/',
+        'https://www.beletrie.eu/chcete-se-dostat-na-lekarskou-fakultu-p50740/',
+        'https://www.beletrie.eu/chcete-se-dostat-na-lekarskou-fakultu-biologie-2-dil-3-vydani-p33520/',
+        'https://www.beletrie.eu/chcete-se-dostat-na-lekarskou-fakultu-fyzika-3-dil-3-vydani-p61020/',
+        'https://www.beletrie.eu/chcete-se-dostat-na-lekarskou-fakultu-4-dil-p45384/',
+        'https://www.beletrie.eu/chcete-se-dostat-na-fakultu-socialnich-studii-ved-p43584/',
+        'https://www.beletrie.eu/chcete-se-dostat-na-vysokou-skolu-anglictina-2-vydani-p15368/',
+        'https://www.beletrie.eu/chcete-se-dostat-na-vysokou-skolu-nemcina-p6170/',
+        'https://www.beletrie.eu/chcete-se-dostat-na-ekonomickou-fakultu-1-dil-p5925/',
+        'https://www.beletrie.eu/chcete-se-dostat-na-pravnickou-fakultu-1-dil-3-vydani-p13819/',
+        'https://www.beletrie.eu/chcete-se-dostat-na-pravnickou-fakultu-3-dil-p45385/',
+        'https://www.beletrie.eu/jak-se-dostat-na-vysokou-skolu-p5924/',
+        'https://www.beletrie.eu/zaklady-spolecenskych-ved-i-dil-2-vydani-p63667/',
+    ]
+
+
+    PathBel = {
+        'name'  : '//h1[contains(@class, "HeadingView v2a v2 Heading")]',
+        'url'   : '//div[contains(@id, "w398516")]',
+    }
+
+    StockBel = 'skladem'
+
 
 class bookstores:
     iBookstores = {
