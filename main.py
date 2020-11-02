@@ -8,51 +8,52 @@ from BKControl import bscontrol
 from tologfile import tologfile
 from data.books import books
 from data.books import bookstores
+from datetime import time
 
 def main():
     bot = bscontrol()
 
-    # print('---------- Kosmas ----------')
-    # bot.BSStock(books.UrlKos, books.PathKos, books.StockKos)
+    print('---------- Kosmas ----------')
+    bot.BSStock(books.UrlKos, books.PathKos, books.StockKos)
 
-    # print('---------- Dobrovsky ----------')
-    # bot.BSStock(books.UrlDobr, books.PathDobr, books.StockDobr)
+    print('---------- Dobrovsky ----------')
+    bot.BSStock(books.UrlDobr, books.PathDobr, books.StockDobr)
     
-    # print('---------- Luxor ----------')
-    # bot.BSStock(books.UrlLux, books.PathLux, books.StockLux)
+    print('---------- Luxor ----------')
+    bot.BSStock(books.UrlLux, books.PathLux, books.StockLux)
 
-    # print('---------- Martinus ----------')
-    # bot.BSStock(books.UrlMar, books.PathMar, books.StockMar)
+    print('---------- Martinus ----------')
+    bot.BSStock(books.UrlMar, books.PathMar, books.StockMar)
 
-    # print('--------- Megaknihy ---------')
-    # bot.BSStock(books.UrlMK, books.PathMK, books.StockMK)
+    print('--------- Megaknihy ---------')
+    bot.BSStock(books.UrlMK, books.PathMK, books.StockMK)
 
-    # print('--------- ABZKnihy ---------')
-    # bot.BSStock(books.UrlABZ, books.PathABZ, books.StockABZ)
+    print('--------- ABZKnihy ---------')
+    bot.BSStock(books.UrlABZ, books.PathABZ, books.StockABZ)
 
-    # print('--------- Knihcentrum ---------')
-    # bot.BSStock(books.UrlKC, books.PathKC, books.StockKC)
+    print('--------- Knihcentrum ---------')
+    bot.BSStock(books.UrlKC, books.PathKC, books.StockKC)
     
-    # print('--------- Knihy ---------')
-    # # # needs to add url for all books
-    # bot.BSStock(books.UrlKnihy, books.PathKnihy, books.StockKnihy)
+    print('--------- Knihy ---------')
+    # # needs to add url for all books
+    bot.BSStock(books.UrlKnihy, books.PathKnihy, books.StockKnihy)
 
-    # print('--------- Booktook ---------')
-    # # in booktook needs to solve problem with xpath for books in stock and not in stock
-    # bot.BSStock(books.UrlBT, books.PathBT, books.StockBT)
+    print('--------- Booktook ---------')
+    # in booktook needs to solve problem with xpath for books in stock and not in stock
+    bot.BSStock(books.UrlBT, books.PathBT, books.StockBT)
 
-    # print('--------- sevt ---------')
-    # bot.BSStock(books.UrlSevt, books.PathSevt, books.StockSevt)
+    print('--------- sevt ---------')
+    bot.BSStock(books.UrlSevt, books.PathSevt, books.StockSevt)
 
-    # print('--------- DumKnihy ---------')
-    # # "Jak se dostat na vysokou skolu" is missing in list
-    # bot.BSStock(books.UrlDK, books.PathDK, books.StockDK)
+    print('--------- DumKnihy ---------')
+    # "Jak se dostat na vysokou skolu" is missing in list
+    bot.BSStock(books.UrlDK, books.PathDK, books.StockDK)
 
-    # print('--------- Ladvi ---------')
-    # bot.BSStock(books.UrlLadvi, books.PathLadvi, books.StockLadvi)
+    print('--------- Ladvi ---------')
+    bot.BSStock(books.UrlLadvi, books.PathLadvi, books.StockLadvi)
 
-    # print('-------- Ucebnice ---------')
-    # bot.BSStock(books.UrlUce, books.PathUce, books.StockUce)
+    print('-------- Ucebnice ---------')
+    bot.BSStock(books.UrlUce, books.PathUce, books.StockUce)
     
     print('-------- Beletrie ---------')
     bot.BSStock(books.UrlBel, books.PathBel, books.StockBel)

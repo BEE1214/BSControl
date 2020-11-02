@@ -440,6 +440,31 @@ class books:
 
     StockBel = 'skladem'
 
+# ----------- Libristo ------------- #
+    UrlLib = [
+        'https://www.libristo.cz/cs/kniha/studijni-predpoklady-a-zaklady-logiky-1-dil_15872390',
+        'https://www.libristo.cz/cs/kniha/testy-obecnych-studijnich-predpokladu-a-zaklady-logiky-2-dil_16244991',
+        'https://www.libristo.cz/cs/kniha/chcete-se-dostat-na-lekarskou-fakultu_00127067',
+        'https://www.libristo.cz/cs/kniha/chcete-se-dostat-na-lekarskou-fakultu-2-dil_00115215',
+        'https://www.libristo.cz/cs/kniha/chcete-se-dostat-na-lekarskou-fakultu-3-dil_00136790',
+        'https://www.libristo.cz/cs/kniha/chcete-se-dostat-na-lekarskou-fakultu-4-dil_00115216',
+        'https://www.libristo.cz/cs/kniha/chcete-se-dostat-na-fakultu-socialnich-studii-ved_00123684',
+        'https://www.libristo.cz/cs/kniha/chcete-se-dostat-na-vysokou-skolu-anglictina_00092199',
+        'https://www.libristo.cz/cs/kniha/chcete-se-dostat-na-vysokou-skolu-nemcina_00074426',
+        'https://www.libristo.cz/cs/kniha/chcete-se-dostat-na-ekonomickou-fakultu-1-dil_00083949',
+        'https://www.libristo.cz/cs/kniha/chcete-se-dostat-na-pravnickou-fakultu_00092203',
+        'https://www.libristo.cz/cs/kniha/chcete-se-dostat-na-pravnickou-fakultu-2-dil_00118335',
+        'https://www.libristo.cz/czs/kniha/jak-se-dostat-na-vysokou-skolu_00079586',
+        'https://www.libristo.cz/cs/kniha/zaklady-spolecenskych-ved-i_00139890',
+    ]
+
+    PathLib = {
+        'name'  : '//*[@id="app"]/section[1]/div/div[3]/div[1]/h1',
+        'ulr'   : '//div[contains(@class, "c-stock-avalibility")]',
+    }
+
+    StockLib = 'do 48 hodin'
+
 
 class bookstores:
     iBookstores = {
