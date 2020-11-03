@@ -305,9 +305,7 @@ class books:
 
     PathBT = {
         'name'  : '//*[@id="det-main"]/div[1]/h1/span',
-        # 'name'  : '//span[contains(@itemprop, "name")]',
         'url'   : '//*[@id="det-buy"]/div/fieldset' 
-        # 'url'   : '//strong[contains(@class, "stock")]' 
     }
 
     StockBT = 'Skladem'
@@ -315,19 +313,19 @@ class books:
 # ------------- sevt ----------------- #
     UrlSevt = [
         'https://www.sevt.cz/produkt/studijni-predpoklady-a-zaklady-logiky-1-dil-724l15349065/',
-        # 'zaklady logiky 2',
+        # '', # 'zaklady logiky 2',
         'https://www.sevt.cz/produkt/chcete-se-dostat-na-lekarskou-fakultu-1-dil-chemie-3-vydani-n0055705/',
         'https://www.sevt.cz/produkt/chcete-se-dostat-na-lekarskou-fakultu-2-dil-biologie-3-vydani-n0055005/',
-        # 'lekarska 3.',
+        # '', # 'lekarska 3.',
         'https://www.sevt.cz/produkt/chcete-se-dostat-na-lekarskou-fakultu-4-dil-fyzika-n0063705/',
         'https://www.sevt.cz/produkt/chcete-se-dostat-na-fakultu-socialnich-studii-2-dil-3-vydani-n0055605/.',
-        # 'anglictina',
+        # '', # 'anglictina',
         'https://www.sevt.cz/produkt/chcete-se-dostat-na-vs-nemcina-n0055805/',
-        # 'ekonomicka',
+        # '', # 'ekonomicka',
         'https://www.sevt.cz/produkt/chcete-se-dostat-na-pravnickou-fakultu-1-dil-3-vydani-n0054805/',
-        # 'prava 2.',
-        # 'jak se dostat na vs',
-        # 'zaklady spol ved 1.',
+        # '', # 'prava 2.',
+        # '', # 'jak se dostat na vs',
+        # '', # 'zaklady spol ved 1.',
     ]
 
     PathSevt = {
@@ -464,6 +462,33 @@ class books:
     }
 
     StockLib = 'do 48 hodin'
+
+# ----------- Knizniarcha ------------ #
+    UrlArch = [
+        # studijni predpoklady 1
+        'https://www.knizniarcha.cz/studijni-predpoklady-a-zaklady-logiky-2.-dil',
+        # lekarska 1
+        # lekarska 2
+        'https://www.knizniarcha.cz/studijni-predpoklady-a-zaklady-logiky-2.-dil',
+        'https://www.knizniarcha.cz/chcete-se-dostat-na-lekarskou-fakultu--4.dil',
+        'https://www.knizniarcha.cz/chcete-se-dostat-na-fakultu-socialnich-studii--ved--',
+        # anglictina
+        # nemcina
+        'https://www.knizniarcha.cz/chcete-se-dostat-na-ekonomickou-fakultu-1.dil',
+        # pravnicka 1
+        # pravnicka 2
+        'https://www.knizniarcha.cz/jak-se-dostat-na-vysokou-skolu-',
+        'https://www.knizniarcha.cz/zaklady-spolecenskych-ved-i.',
+    ]
+
+    PathArch = {
+        'name'  : '//*[@id="product_detail"]/div/div[1]/div[2]/div[2]/h1',
+        'url'   : '//div[contains(@class, "availability")]',
+    }
+
+    StockArch = 'Skladem'
+
+
 
 
 class bookstores:

@@ -11,19 +11,19 @@ from selenium.webdriver.common.keys import Keys
 from selenium.common.exceptions import NoSuchElementException
 from selenium.common.exceptions import TimeoutException
 from time import sleep
+from tologfile import tologfile
 
 class bscontrol:
-    """
-    Library for controling books in stock on certain bookstores
+    """ Library with functions for controling books in stock on certain bookstores.
+
     Dependencies:
         - python 3.8.5
         - selenium
         On linux:
             - Brave browser
-            - webdriver for chrome 84
         On windows:
             - Google Chrome or Chromium
-            - webdriver for actual version of Google chrome browser
+        - webdriver for actual version of Brave/Chrome browser
     """
     def __init__(self):
         if (system() == 'Linux'):
@@ -39,15 +39,16 @@ class bscontrol:
             self.driver = webdriver.Chrome(executable_path=self.driver_path)
             self.driver.set_window_position(-1920,0)
             self.driver.set_window_size(1300, 1080)
-
+    def __del__(self):
+        self.driver.close()
 # ===================== BookSearch ======================== #
     def BookSearch(self, aUrl, aPath):
         """
-        arg:
-            aUrl - url of bookstore
-            aPath - xpath for element on page
-        return:
-            iSearch - list of searched books with their stock status
+        Args:
+            aUrl(List): url of bookstore
+            aPath(Dictionary): xpath for element on page
+        Returns:
+            iSearch(List): list of searched books with their stock status
         """
         iSearch = []
 
@@ -72,11 +73,11 @@ class bscontrol:
 # ===================== BookStock ========================= #
     def BookStock(self, aBooks, aStock):
         """
-        arg:
-            aBooks - list of books with their stock status
-            aStock - key word for stock option for different pages
-        return:
-            iStock - list of books not in stock
+        Args:
+            aBooks(List): list of books with their stock status
+            aStock(String): key word for stock option for different pages
+        Returns:
+            iStock(List): list of books not in stock
         """
         iStock = []
 
@@ -92,8 +93,7 @@ class bscontrol:
 
 # ===================== PrintBook ======================== #
     def PrintBooks(self, aStock):
-        """
-        Simple list printing function.
+        """ Simple list printing function.
         """
         for i in range(len(aStock)):
             print(aStock[i])
@@ -101,8 +101,22 @@ class bscontrol:
     
 # =================== BookFucntions ======================= #
     def BSStock(self, aUrl, aPath, aStock):
+        """ Goes throught list of urls, finds state of books on those pages and prints books that aren't in stock.
+
+        Args:
+            aUrl (list): list of urls
+            aPath (dictionary): contains name and stock with xpath
+            aStock (string): term for book in stock
+
+        Returns:
+            list: list of books that are not in stock
+        """
         iSearch = self.BookSearch(aUrl, aPath)
-        self.PrintBooks(self.BookStock(iSearch, aStock))
+        iStock = self.BookStock(iSearch, aStock)
+        tologfile('Search.txt').tofile(iSearch)
+        tologfile('Stock.txt').tofile(iStock)
+        self.PrintBooks(iStock)
+        return iStock
 
 # ==================== PageLookup ========================= #
     def WebPage(self, aWebPage):
