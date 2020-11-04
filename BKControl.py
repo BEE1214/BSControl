@@ -50,7 +50,7 @@ class bscontrol:
         Returns:
             iSearch(List): list of searched books with their stock status
         """
-        iSearch = []
+        iSearch = [aPath['BookStore']]
 
         for i in range(len(aUrl)):
             self.WebPage(aUrl[i])
@@ -79,7 +79,7 @@ class bscontrol:
         Returns:
             iStock(List): list of books not in stock
         """
-        iStock = []
+        iStock = [aStock[0]]
 
         for i in range(len(aBooks)):
             if(aBooks[i].find(aStock) == -1):

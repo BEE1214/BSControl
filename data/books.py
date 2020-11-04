@@ -304,8 +304,9 @@ class books:
     ]
 
     PathBT = {
-        'name'  : '//*[@id="det-main"]/div[1]/h1/span',
-        'url'   : '//*[@id="det-buy"]/div/fieldset' 
+        'BootStore' : 'BookTook',
+        'name'      : '//*[@id="det-main"]/div[1]/h1/span',
+        'url'       : '//*[@id="det-buy"]/div/fieldset' 
     }
 
     StockBT = 'Skladem'
@@ -405,8 +406,9 @@ class books:
 
 
     PathUce = {
-        'name'  : '//span[contains(@itemprop, "name")]',
-        'url'   : '//*[@id="pb-right-column"]/div[1]/div/div/div/strong',
+        'BookStore' : 'Ucebnice.cz',
+        'name'      : '//span[contains(@itemprop, "name")]',
+        'url'       : '//*[@id="pb-right-column"]/div[1]/div/div/div/strong',
         # 'url'   : '//link[contains(@itemprop, "availability")]',
     }
 
@@ -432,8 +434,9 @@ class books:
 
 
     PathBel = {
-        'name'  : '//h1[contains(@class, "HeadingView v2a v2 Heading")]',
-        'url'   : '//div[contains(@id, "w398516")]',
+        'BookStore' : 'Beletrie',
+        'name'      : '//h1[contains(@class, "HeadingView v2a v2 Heading")]',
+        'url'       : '//div[contains(@id, "w398516")]',
     }
 
     StockBel = 'skladem'
@@ -457,8 +460,9 @@ class books:
     ]
 
     PathLib = {
-        'name'  : '//*[@id="app"]/section[1]/div/div[3]/div[1]/h1',
-        'ulr'   : '//div[contains(@class, "c-stock-avalibility")]',
+        'BookStore' : 'Libristo',
+        'name'      : '//*[@id="app"]/section[1]/div/div[3]/div[1]/h1',
+        'ulr'       : '//div[contains(@class, "c-stock-avalibility")]',
     }
 
     StockLib = 'do 48 hodin'
@@ -482,8 +486,9 @@ class books:
     ]
 
     PathArch = {
-        'name'  : '//*[@id="product_detail"]/div/div[1]/div[2]/div[2]/h1',
-        'url'   : '//div[contains(@class, "availability")]',
+        'BookStore' : 'Knizniarcha',
+        'name'      : '//*[@id="product_detail"]/div/div[1]/div[2]/div[2]/h1',
+        'url'       : '//div[contains(@class, "availability")]',
     }
 
     StockArch = 'Skladem'
@@ -503,5 +508,7 @@ class bookstores:
         'Knihy'         : 'https://www.knihy.cz/',
         'Booktook'      : 'https://www.booktook.cz/',
         'Sevt'          : 'https://www.sevt.cz/',
+        'Dumknihy'      : 'https://www.dumknihy.cz/',
+        'Ladvi'         : 'https://www.knihkupectvi-ladvi.cz/',
 
     }

@@ -15,16 +15,24 @@ class errors(Enum):
     CannotWrite = 2
 
 class tologfile:
+    """Library with functions to log into files Search.txt and Stock.txt.
+    """
+    iCount = 0
+    # iStWrite = True
 
     def __init__(self, aFile):
         self.iFile = aFile
         try:
-            self.iLogFile = open(self.iFile, 'a')
+            if (tologfile.iCount == 0):
+                self.iLogFile = open(self.iFile, 'w')
+            else:
+                self.iLogFile = open(self.iFile, 'a')
         except:
             print(f'{exc_info()[0]}')
-
+        tologfile.iCount += 1
+    
     def tofile(self, aList):
-        """Print list to specified text file in class variable iFile
+        """Print list to specified text file in class variable iFile.
 
         Args:
             aList (list): List to print into the text file
@@ -34,7 +42,7 @@ class tologfile:
                   posible options: OK/CannotWrite
         """
         try:
-            self.iLogFile.write(datetime.now().strftime("%Y:%m:%d - %H:%M"))
+            self.iLogFile.write(datetime.now().strftime("%Y-%m-%d - %H:%M"))
             self.iLogFile.write(" \n")
             for i in range(len(aList)):
                 self.iLogFile.write(aList[i])

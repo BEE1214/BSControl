@@ -12,7 +12,9 @@ from datetime import time
 
 def main():
     bot = bscontrol()
-
+    iLoop = False
+    
+    # while True:
     # print('---------- Kosmas ----------')
     # bot.BSStock(books.UrlKos, books.PathKos, books.StockKos)
 
@@ -58,9 +60,9 @@ def main():
     print('-------- Beletrie ---------')
     bot.BSStock(books.UrlBel, books.PathBel, books.StockBel)
 
-    print('--------- Knizniarcha ----------')
-    bot.BSStock(books.UrlArch, books.PathArch, books.StockArch)
-    print('studijni predpoklady, lekarskou 1 a 2, anglictina, nemcina pravnicka 1 a 2 nemaji vubec v nabidce')
+    # print('--------- Knizniarcha ----------')
+    # bot.BSStock(books.UrlArch, books.PathArch, books.StockArch)
+    # print('studijni predpoklady, lekarskou 1 a 2, anglictina, nemcina pravnicka 1 a 2 nemaji vubec v nabidce')
 
     return 0
 
