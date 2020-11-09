@@ -43,8 +43,9 @@ class books:
     ]
 
     PathDobr = {
-        'name' : '//span[contains(@itemprop, "name")]',
-        'url' : '//*[@id="snippet-bookDetail-availabilityInfo"]/div/div[1]/ul/li[1]',
+        'BookStore' : 'Dobrovsky',
+        'name'      : '//span[contains(@itemprop, "name")]',
+        'url'       : '//*[@id="snippet-bookDetail-availabilityInfo"]/div/div[1]/ul/li[1]',
     }
 
     StockDobr = 'Skladem'
@@ -68,8 +69,9 @@ class books:
     ]
 
     PathKos = {
-        'name' : '//h1[contains(@class, "product__title")]',
-        'url' : "//td[contains(@class, 'availability')]",
+        'BookStore' : 'Kosmas',
+        'name'      : '//h1[contains(@class, "product__title")]',
+        'url'       : "//td[contains(@class, 'availability')]",
     }
 
     StockKos = 'Skladem'
@@ -109,8 +111,9 @@ class books:
     ]
 
     PathLux = {
-        'name' : '//div[contains(@class, "ant-col ant-col-xs-24 ant-col-md-12")]',
-        'url' : '//div[contains(@class, "f1ubm3q7")]',
+        'BookStore' : 'Luxor',
+        'name'      : '//div[contains(@class, "ant-col ant-col-xs-24 ant-col-md-12")]',
+        'url'       : '//div[contains(@class, "f1ubm3q7")]',
     }
 
     StockLux = 'SKLADEM'
@@ -134,8 +137,9 @@ class books:
     ]
 
     PathMar = {
-        'name'  : '//h1[contains(@class, "product-detail__title mb-small")]',
-        'url'   : '//*[@id="web"]/article/div[2]', 
+        'BookStore' : 'Martinus',
+        'name'      : '//h1[contains(@class, "product-detail__title mb-small")]',
+        'url'       : '//*[@id="web"]/article/div[2]', 
     }
 
     StockMar = 'Na skladě'
@@ -180,8 +184,9 @@ class books:
     ]
 
     PathMK = {
-        'name'  : '//span[contains(@itemprop, "name")]',
-        'url'   : '//span[contains(@class, "avail_now_text")]',
+        'BookStore' : 'Megaknihy',
+        'name'      : '//span[contains(@itemprop, "name")]',
+        'url'       : '//span[contains(@class, "avail_now_text")]',
     }
 
     StockMK = 'máme skladem'
@@ -222,9 +227,10 @@ class books:
     ]
 
     PathABZ = {
-        'name'  : '//span[contains(@itemprop, "name")]',
+        'BookStore' : 'ABZ Knihy',
+        'name'      : '//span[contains(@itemprop, "name")]',
         # 'name'  : '//*[@id="content_part"]/div[2]/article/div/h2/span[1]',
-        'url'   : '//span[contains(@class, "dostupnost")]',
+        'url'       : '//span[contains(@class, "dostupnost")]',
     }
 
     StockABZ = 'skladem'
@@ -248,8 +254,9 @@ class books:
     ]
 
     PathKC = {
-        'name'  : '//h1[contains(@itemprop, "name")]',
-        'url'   : '//span[contains(@class, "stock-name")]',
+        'BookStore' : 'Knihcentrum',
+        'name'      : '//h1[contains(@itemprop, "name")]',
+        'url'       : '//span[contains(@class, "stock-name")]',
     }
 
     StockKC = 'IHNED odesíláme'
@@ -279,19 +286,20 @@ class books:
         # '', # lekarska 2
         'https://www.knihy.cz/chcete-se-dostat-na-lekarskou-fakultu-3-dil/',
         'https://www.knihy.cz/chcete-se-dostat-na-lekarskou-fakultu-4-dil/',
-        # '', # socialni
+        'https://www.knihy.cz/chcete-se-dostat-na-fakultu-socialnich-studii-ved/', # socialni
         # '', # anglictina
-        # '', # nemcina
-        # '', # ekonomicka
-        # '', # pravnicka 1
+        'https://www.knihy.cz/chcete-se-dostat-na-vysokou-skolu-nemcina/', # nemcina
+        'https://www.knihy.cz/chcete-se-dostat-na-ekonomickou-fakultu-1-dil/', # ekonomicka
+        'https://www.knihy.cz/chcete-se-dostat-na-pravnickou-fakultu/', # pravnicka 1
         # '', # pravnicka 2
-        # '', # vysoka
-        # '', # zaklady spol ved
+        'https://www.knihy.cz/jak-se-dostat-na-vysokou-skolu/', # vysoka
+        'https://www.knihy.cz/zaklady-spolecenskych-ved-i/', # zaklady spol ved
     ]
 
     PathKnihy = {
-        'name'  : '//h1[contains(@class, "box-detail__info__title")]',
-        'url'   : '//div[contains(@class, "box-detail__info__availability box-detail__info__availability--code-inStock")]'
+        'BookStore' : 'Knihy.cz',
+        'name'      : '//h1[contains(@class, "box-detail__info__title")]',
+        'url'       : '//div[contains(@class, "box-detail__info__availability box-detail__info__availability--code-inStock")]'
     }
 
     StockKnihy = 'Skladem 5+ ks'
@@ -301,10 +309,21 @@ class books:
         'https://www.booktook.cz/p/testy-obecnych-studijnich-predpokladu-a-zaklady-logiky-1-dil-9788086572802/', # 11. editon
         'https://www.booktook.cz/p/testy-obecnych-studijnich-predpokladu-a-zaklady-logiky-2-dil/',
         'https://www.booktook.cz/p/chcete-se-dostat-na-lekarskou-fakultu-chemie-1-dil-3-vydani-220-otazek-z-prijimacich-zkousek-s-resenim/',
+        'https://www.booktook.cz/p/chcete-se-dostat-na-lekarskou-fakultu-biologie-2-dil/', # lekarska 2
+        'https://www.booktook.cz/p/chcete-se-dostat-na-lekarskou-fakultu-fyzika-3-dil-9788086572741/', # lekarska 3
+        'https://www.booktook.cz/p/chcete-se-dostat-na-lekarskou-fakultu-4-dil-biologie-fyzika-chemie-cvicebnice-testovych-otazek/', # lekarska 4
+        'https://www.booktook.cz/p/chcete-se-dostat-na-fakultu-socialnich-studii-ved-2-dil-3-vydani-psychologie-a-sociologie-filozofie-a-politicka-filozofie-politologie/', # soc
+        # '', # anglictina
+        # '', # nemcina
+        # '', # ekonomika
+        # '', # prava 1
+        'https://www.booktook.cz/p/chcete-se-dostat-na-pravnickou-fakultu-2-dil-3-vydani/', # prava 2
+        # '', # vs
+        'https://www.booktook.cz/p/zaklady-spolecenskych-ved-i-dil-priprava-pro-prijimaci-zkousky-na-vysoke-skoly/', # zsv
     ]
 
     PathBT = {
-        'BootStore' : 'BookTook',
+        'BookStore' : 'BookTook',
         'name'      : '//*[@id="det-main"]/div[1]/h1/span',
         'url'       : '//*[@id="det-buy"]/div/fieldset' 
     }
@@ -330,8 +349,9 @@ class books:
     ]
 
     PathSevt = {
-        'name'  : '//h1[contains(@itemprop, "name")]',
-        'url'   : '//span[contains(@class, "stock")]'
+        'BookStore' : 'SEVT',
+        'name'      : '//h1[contains(@itemprop, "name")]',
+        'url'       : '//span[contains(@class, "stock")]'
     }
 
     StockSevt = 'skladem'
@@ -350,13 +370,14 @@ class books:
         'https://www.dumknihy.cz/chcete-se-dostat-na-ekonomickou-fakultu-78506',
         'https://www.dumknihy.cz/chcete-se-dostat-na-pravnickou-fakultu-1-dil-90124',
         'https://www.dumknihy.cz/chcete-se-dostat-na-pravnickou-fakultu-2-dil-140074',
-        # '',
+        # '', # jak se dostat na vs
         'https://www.dumknihy.cz/zaklady-spolecenskych-ved-i-dil-137766',
     ]
 
     PathDK = {
-        'name'  : '//*[@id="breadcrumbs"]/p',
-        'url'   : '//p[contains(@class, "availability yes")]'
+        'BookStore' : 'DumKnihy',
+        'name'      : '//*[@id="breadcrumbs"]/p',
+        'url'       : '//p[contains(@class, "availability yes")]'
     }
 
     StockDK = 'je skladem'
@@ -380,8 +401,9 @@ class books:
     ]
 
     PathLadvi = {
-        'name'  : '//h1[contains(@class, "HeadingView v2a v2 Heading")]',
-        'url'   : '//span[contains(@class, "label")]'
+        'BookStore' : 'Ladvi',
+        'name'      : '//h1[contains(@class, "HeadingView v2a v2 Heading")]',
+        'url'       : '//span[contains(@class, "label")]'
     }
 
     StockLadvi = 'Skladem'
@@ -471,16 +493,16 @@ class books:
     UrlArch = [
         # studijni predpoklady 1
         'https://www.knizniarcha.cz/studijni-predpoklady-a-zaklady-logiky-2.-dil',
-        # lekarska 1
-        # lekarska 2
+        # '', # lekarska 1
+        'https://www.knizniarcha.cz/chcete-se-dostat-na-lekarskou-fakultu--2.-dil-biologie', # lekarska 2
         'https://www.knizniarcha.cz/studijni-predpoklady-a-zaklady-logiky-2.-dil',
         'https://www.knizniarcha.cz/chcete-se-dostat-na-lekarskou-fakultu--4.dil',
         'https://www.knizniarcha.cz/chcete-se-dostat-na-fakultu-socialnich-studii--ved--',
-        # anglictina
-        # nemcina
+        # '', # anglictina
+        # '', # nemcina
         'https://www.knizniarcha.cz/chcete-se-dostat-na-ekonomickou-fakultu-1.dil',
-        # pravnicka 1
-        # pravnicka 2
+        'https://www.knizniarcha.cz/kalabis--radim---chcete-se-dostat-na-pravnickou-fakultu--1', # pravnicka 1
+        'https://www.knizniarcha.cz/kotlan--igor---chcete-se-dostat-na-pravnickou-fakultu--2.-dil---vseobecny-prehled-a-zaklady-prava', # pravnicka 2
         'https://www.knizniarcha.cz/jak-se-dostat-na-vysokou-skolu-',
         'https://www.knizniarcha.cz/zaklady-spolecenskych-ved-i.',
     ]
@@ -493,11 +515,63 @@ class books:
 
     StockArch = 'Skladem'
 
+# ----------- Books.cz -------------- #
+    UrlBooks = [
+        'https://www.books.cz/studijni-predpoklady-a-zaklady-logiky-1-dil-2/',
+        'https://www.books.cz/studijni-predpoklady-a-zaklady-logiky-2-dil/',
+        # '', # lekarska 1
+        # '', # lekarska 2
+        'https://www.books.cz/chcete-se-dostat-na-lekarskou-fakultu-3-dil-2/',
+        'https://www.books.cz/chcete-se-dostat-na-lekarskou-fakultu-4-dil-3/',
+        'https://www.books.cz/chcete-se-dostat-na-fakultu-socialnich-studii-ved-2/',
+        'https://www.books.cz/chcete-se-dostat-na-vysokou-skolu-anglictina-2/',
+        'https://www.books.cz/chcete-se-dostat-na-vysokou-skolu-nemcina-2/',
+        'https://www.books.cz/chcete-se-dostat-na-ekonomickou-fakultu-1-dil-2/',
+        'https://www.books.cz/chcete-se-dostat-na-pravnickou-fakultu-3/',
+        # '', # pravnicka 2
+        'https://www.books.cz/jak-se-dostat-na-vysokou-skolu-2/', # jak se dostat na vs
+        'https://www.books.cz/zaklady-spolecenskych-ved-i-2/', # zaklady spol ved
+    ]
+
+    PathBooks = {
+        'BookStore' : 'Books.cz',
+        #              /html/body/div[1]/div[2]/div/div[1]/div/div[2]/div[1]/div[2]/h1
+        'name'      : '/html/body/div[1]/div[2]/div/div[1]/div/div[2]/div[1]/div[2]/h1',
+        'url'       : '/html/body/div[1]/div[2]/div/div[1]/div/div[2]/div[1]/div[2]/div[2]/div/div[2]',
+    }
+
+    StockBooks = 'Skladem 5+'
+
+# ----------- Levne-Knizky ---------- #
+    UrlLK = [
+        'https://www.levne-knizky.cz/studijni-predpoklady-a-zaklady-logiky-1-dil/',
+        'https://www.levne-knizky.cz/studijni-predpoklady-a-zaklady-logiky-2-dil/',
+        # '', # lekarska 1
+        # '', # lekarska 2
+        'https://www.levne-knizky.cz/chcete-se-dostat-na-lekarskou-fakultu-3-dil/',
+        'https://www.levne-knizky.cz/chcete-se-dostat-na-lekarskou-fakultu-4-dil/',
+        'https://www.levne-knizky.cz/chcete-se-dostat-na-fakultu-socialnich-studii-ved/',
+        'https://www.levne-knizky.cz/chcete-se-dostat-na-vysokou-skolu-anglictina/',
+        'https://www.levne-knizky.cz/chcete-se-dostat-na-vysokou-skolu-nemcina/',
+        'https://www.levne-knizky.cz/chcete-se-dostat-na-ekonomickou-fakultu-1-dil/',
+        'https://www.levne-knizky.cz/chcete-se-dostat-na-pravnickou-fakultu-2/',
+        # '', # pravnicka 2
+        'https://www.levne-knizky.cz/jak-se-dostat-na-vysokou-skolu/', # jak se dostat na vs
+        'https://www.levne-knizky.cz/zaklady-spolecenskych-ved-i/', # zsv
+    ]
+
+    PathLK = {
+        'BookStore' : 'Levne-Knizky',
+        'name'      : '/html/body/div[2]/div[2]/div/div[1]/div/div[2]/div[1]/div[2]/h1',
+        'url'       : '/html/body/div[2]/div[2]/div/div[1]/div/div[2]/div[1]/div[2]/div[2]',
+    }
+
+    StockLK = '5+'
 
 
 
 class bookstores:
-    iBookstores = {
+    iUrl = {
         'Dobrovsky'     : 'https://www.knihydobrovsky.cz/',
         'Kosmas'        : 'https://www.kosmas.cz/',
         'Luxor'         : 'https://www.luxor.cz/',
@@ -510,5 +584,31 @@ class bookstores:
         'Sevt'          : 'https://www.sevt.cz/',
         'Dumknihy'      : 'https://www.dumknihy.cz/',
         'Ladvi'         : 'https://www.knihkupectvi-ladvi.cz/',
+        'Ucebnice'      : 'https://www.ucebnice.cz/',
+        'Beletrie'      : 'https://www.beletrie.eu/',
+        'Libristo'      : 'https://www.libristo.cz/',
+        'Knizniarcha'   : 'https://www.knizniarcha.cz/',
+        'Books.cz'      : 'https://www.books.cz/',
+        'Levne-knizky'  : 'https://www.levne-knizky.cz/',
+    }
 
+    iEmails = {
+        'Dobrovsky'     : 'poradime@knihydobrovsky.cz',
+        'Kosmas'        : 'nakup@kosmas.cz',
+        'Luxor'         : 'info@luxor.cz',
+        'Martinus'      : 'naslovicko@martinus.cz',
+        'Megaknihy'     : 'info@megaknihy.cz',
+        'ABZ'           : 'knihy@abz.cz',
+        'Knihcentrum'   : 'obchod@knihcentrum.cz',
+        'Knihy'         : 'info@levne-knizky.cz',
+        'Booktook'      : 'info@booktook.cz',
+        'Sevt'          : 'kyncl@sevt.cz',
+        'Dumknihy'      : 'eshop@kanzelsberger.cz',
+        'Ladvi'         : 'info@knihkupectvi-ladvi.cz',
+        'Ucebnice'      : 'info@ucebnice.cz',
+        'Beletrie'      : 'obchod@beletrie.eu',
+        'Libristo'      : 'info@libristo.cz',
+        'Knizniarcha'   : 'obchod@knizniarcha.cz',
+        'Books.cz'      : 'info@books.cz',
+        'Levne-knizky'  : 'info@levne-knizky.cz',
     }

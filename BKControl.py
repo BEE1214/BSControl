@@ -37,18 +37,20 @@ class bscontrol:
             # self.options.binary_location = 'C:/Program Files (x86)/BraveSoftware/Brave-Browser/Application/brave.exe'
             self.driver_path = r'C:/Users/adamd/Apps/Chromdriver/chromedriver.exe'
             self.driver = webdriver.Chrome(executable_path=self.driver_path)
-            self.driver.set_window_position(-1920,0)
-            self.driver.set_window_size(1300, 1080)
+            # self.driver.set_window_position(-1920,0)
+            self.driver.set_window_size(1080, 1080)
+    
     def __del__(self):
         self.driver.close()
+
 # ===================== BookSearch ======================== #
     def BookSearch(self, aUrl, aPath):
         """
         Args:
-            aUrl(List): url of bookstore
-            aPath(Dictionary): xpath for element on page
+            aUrl(list): url of bookstore
+            aPath(dictionary): xpath for element on page
         Returns:
-            iSearch(List): list of searched books with their stock status
+            iSearch(list): list of searched books with their stock status
         """
         iSearch = [aPath['BookStore']]
 
@@ -57,7 +59,7 @@ class bscontrol:
             try:
                 name = self.driver.find_element_by_xpath(aPath["name"]).text
             except NoSuchElementException:
-                print('No such element on webpage')
+                print('Couldn\'t find name element on webpage')
             except TimeoutException:
                 print('Your internet is too much of a potato')
             try:
@@ -74,12 +76,13 @@ class bscontrol:
     def BookStock(self, aBooks, aStock):
         """
         Args:
-            aBooks(List): list of books with their stock status
-            aStock(String): key word for stock option for different pages
+            aBooks(list): list of books with their stock status
+            aStock(string): key word for stock option for different pages
         Returns:
-            iStock(List): list of books not in stock
+            iStock(list): list of books not in stock
         """
-        iStock = [aStock[0]]
+        # iStock = [aStock[0]]
+        iStock = []
 
         for i in range(len(aBooks)):
             if(aBooks[i].find(aStock) == -1):
@@ -113,8 +116,8 @@ class bscontrol:
         """
         iSearch = self.BookSearch(aUrl, aPath)
         iStock = self.BookStock(iSearch, aStock)
-        tologfile('Search.txt').tofile(iSearch)
-        tologfile('Stock.txt').tofile(iStock)
+        tologfile('Search.log').tofile(iSearch)
+        tologfile('Stock.log').tofile(iStock)
         self.PrintBooks(iStock)
         return iStock
 

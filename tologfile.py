@@ -18,12 +18,11 @@ class tologfile:
     """Library with functions to log into files Search.txt and Stock.txt.
     """
     iCount = 0
-    # iStWrite = True
 
     def __init__(self, aFile):
         self.iFile = aFile
         try:
-            if (tologfile.iCount == 0):
+            if (tologfile.iCount < 2):
                 self.iLogFile = open(self.iFile, 'w')
             else:
                 self.iLogFile = open(self.iFile, 'a')
@@ -42,7 +41,8 @@ class tologfile:
                   posible options: OK/CannotWrite
         """
         try:
-            self.iLogFile.write(datetime.now().strftime("%Y-%m-%d - %H:%M"))
+            # self.iLogFile.write(datetime.now().strftime("%Y-%m-%d - %H:%M"))
+            self.iLogFile.write('/=======================================================================\\')
             self.iLogFile.write(" \n")
             for i in range(len(aList)):
                 self.iLogFile.write(aList[i])
