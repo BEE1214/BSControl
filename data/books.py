@@ -286,14 +286,14 @@ class books:
         # '', # lekarska 2
         'https://www.knihy.cz/chcete-se-dostat-na-lekarskou-fakultu-3-dil/',
         'https://www.knihy.cz/chcete-se-dostat-na-lekarskou-fakultu-4-dil/',
-        'https://www.knihy.cz/chcete-se-dostat-na-fakultu-socialnich-studii-ved/', # socialni
+        'https://www.knihy.cz/chcete-se-dostat-na-fakultu-socialnich-studii-ved/',
         # '', # anglictina
-        'https://www.knihy.cz/chcete-se-dostat-na-vysokou-skolu-nemcina/', # nemcina
-        'https://www.knihy.cz/chcete-se-dostat-na-ekonomickou-fakultu-1-dil/', # ekonomicka
-        'https://www.knihy.cz/chcete-se-dostat-na-pravnickou-fakultu/', # pravnicka 1
+        'https://www.knihy.cz/chcete-se-dostat-na-vysokou-skolu-nemcina/',
+        'https://www.knihy.cz/chcete-se-dostat-na-ekonomickou-fakultu-1-dil/',
+        'https://www.knihy.cz/chcete-se-dostat-na-pravnickou-fakultu/',
         # '', # pravnicka 2
-        'https://www.knihy.cz/jak-se-dostat-na-vysokou-skolu/', # vysoka
-        'https://www.knihy.cz/zaklady-spolecenskych-ved-i/', # zaklady spol ved
+        'https://www.knihy.cz/jak-se-dostat-na-vysokou-skolu/',
+        'https://www.knihy.cz/zaklady-spolecenskych-ved-i/',
     ]
 
     PathKnihy = {
@@ -309,17 +309,17 @@ class books:
         'https://www.booktook.cz/p/testy-obecnych-studijnich-predpokladu-a-zaklady-logiky-1-dil-9788086572802/', # 11. editon
         'https://www.booktook.cz/p/testy-obecnych-studijnich-predpokladu-a-zaklady-logiky-2-dil/',
         'https://www.booktook.cz/p/chcete-se-dostat-na-lekarskou-fakultu-chemie-1-dil-3-vydani-220-otazek-z-prijimacich-zkousek-s-resenim/',
-        'https://www.booktook.cz/p/chcete-se-dostat-na-lekarskou-fakultu-biologie-2-dil/', # lekarska 2
-        'https://www.booktook.cz/p/chcete-se-dostat-na-lekarskou-fakultu-fyzika-3-dil-9788086572741/', # lekarska 3
-        'https://www.booktook.cz/p/chcete-se-dostat-na-lekarskou-fakultu-4-dil-biologie-fyzika-chemie-cvicebnice-testovych-otazek/', # lekarska 4
-        'https://www.booktook.cz/p/chcete-se-dostat-na-fakultu-socialnich-studii-ved-2-dil-3-vydani-psychologie-a-sociologie-filozofie-a-politicka-filozofie-politologie/', # soc
+        'https://www.booktook.cz/p/chcete-se-dostat-na-lekarskou-fakultu-biologie-2-dil/',
+        'https://www.booktook.cz/p/chcete-se-dostat-na-lekarskou-fakultu-fyzika-3-dil-9788086572741/',
+        'https://www.booktook.cz/p/chcete-se-dostat-na-lekarskou-fakultu-4-dil-biologie-fyzika-chemie-cvicebnice-testovych-otazek/',
+        'https://www.booktook.cz/p/chcete-se-dostat-na-fakultu-socialnich-studii-ved-2-dil-3-vydani-psychologie-a-sociologie-filozofie-a-politicka-filozofie-politologie/',
         # '', # anglictina
         # '', # nemcina
         # '', # ekonomika
         # '', # prava 1
-        'https://www.booktook.cz/p/chcete-se-dostat-na-pravnickou-fakultu-2-dil-3-vydani/', # prava 2
+        'https://www.booktook.cz/p/chcete-se-dostat-na-pravnickou-fakultu-2-dil-3-vydani/',
         # '', # vs
-        'https://www.booktook.cz/p/zaklady-spolecenskych-ved-i-dil-priprava-pro-prijimaci-zkousky-na-vysoke-skoly/', # zsv
+        'https://www.booktook.cz/p/zaklady-spolecenskych-ved-i-dil-priprava-pro-prijimaci-zkousky-na-vysoke-skoly/',
     ]
 
     PathBT = {
@@ -494,15 +494,15 @@ class books:
         # studijni predpoklady 1
         'https://www.knizniarcha.cz/studijni-predpoklady-a-zaklady-logiky-2.-dil',
         # '', # lekarska 1
-        'https://www.knizniarcha.cz/chcete-se-dostat-na-lekarskou-fakultu--2.-dil-biologie', # lekarska 2
+        'https://www.knizniarcha.cz/chcete-se-dostat-na-lekarskou-fakultu--2.-dil-biologie',
         'https://www.knizniarcha.cz/studijni-predpoklady-a-zaklady-logiky-2.-dil',
         'https://www.knizniarcha.cz/chcete-se-dostat-na-lekarskou-fakultu--4.dil',
         'https://www.knizniarcha.cz/chcete-se-dostat-na-fakultu-socialnich-studii--ved--',
         # '', # anglictina
         # '', # nemcina
         'https://www.knizniarcha.cz/chcete-se-dostat-na-ekonomickou-fakultu-1.dil',
-        'https://www.knizniarcha.cz/kalabis--radim---chcete-se-dostat-na-pravnickou-fakultu--1', # pravnicka 1
-        'https://www.knizniarcha.cz/kotlan--igor---chcete-se-dostat-na-pravnickou-fakultu--2.-dil---vseobecny-prehled-a-zaklady-prava', # pravnicka 2
+        'https://www.knizniarcha.cz/kalabis--radim---chcete-se-dostat-na-pravnickou-fakultu--1',
+        'https://www.knizniarcha.cz/kotlan--igor---chcete-se-dostat-na-pravnickou-fakultu--2.-dil---vseobecny-prehled-a-zaklady-prava',
         'https://www.knizniarcha.cz/jak-se-dostat-na-vysokou-skolu-',
         'https://www.knizniarcha.cz/zaklady-spolecenskych-ved-i.',
     ]
@@ -529,8 +529,8 @@ class books:
         'https://www.books.cz/chcete-se-dostat-na-ekonomickou-fakultu-1-dil-2/',
         'https://www.books.cz/chcete-se-dostat-na-pravnickou-fakultu-3/',
         # '', # pravnicka 2
-        'https://www.books.cz/jak-se-dostat-na-vysokou-skolu-2/', # jak se dostat na vs
-        'https://www.books.cz/zaklady-spolecenskych-ved-i-2/', # zaklady spol ved
+        'https://www.books.cz/jak-se-dostat-na-vysokou-skolu-2/',
+        'https://www.books.cz/zaklady-spolecenskych-ved-i-2/',
     ]
 
     PathBooks = {
@@ -556,8 +556,8 @@ class books:
         'https://www.levne-knizky.cz/chcete-se-dostat-na-ekonomickou-fakultu-1-dil/',
         'https://www.levne-knizky.cz/chcete-se-dostat-na-pravnickou-fakultu-2/',
         # '', # pravnicka 2
-        'https://www.levne-knizky.cz/jak-se-dostat-na-vysokou-skolu/', # jak se dostat na vs
-        'https://www.levne-knizky.cz/zaklady-spolecenskych-ved-i/', # zsv
+        'https://www.levne-knizky.cz/jak-se-dostat-na-vysokou-skolu/',
+        'https://www.levne-knizky.cz/zaklady-spolecenskych-ved-i/',
     ]
 
     PathLK = {
