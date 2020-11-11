@@ -568,6 +568,34 @@ class books:
 
     StockLK = '5+'
 
+# ------------ Academia ----------- #
+    UrlAca = [
+        'https://www.academia.cz/studijni-predpoklady-a-zaklady-logiky-i--kotlan-pavel--sokrates--2017',
+        'https://www.academia.cz/studijni-predpoklady-a-zaklady-logiky-ii--kotlan-pavel-a-kol--sokrates--2017',
+        # '', # lekarska 1
+        # '', # lekarska 2
+        # '', # lekarska 3
+        'https://www.academia.cz/chcete-se-dostat-na-lekarskou-fakultu-4-dil-biologie-fyzika-chemie-3-vyd--sokrates--2011',
+        'https://www.academia.cz/chcete-se-dostat-na-fakultu-socialnich-studii-ved-2-dil--sokrates--2012',
+        'https://www.academia.cz/chcete-se-dostat-na-vysokou-skolu-anglictina--kol--sokrates--2009',
+        'https://www.academia.cz/chcete-se-dostat-na-vysokou-skolu-nemcina--balouskova-sona--sokrates--2007',
+        # '', # ekonomicka
+        'https://www.academia.cz/chcete-se-dostat-na-pravnickou-fakultu-1-dil-vseobecny-prehled-a-zaklady-prava--kol--sokrates--2009',
+        'https://www.academia.cz/chcete-se-dostat-na-pravnickou-fakultu-2-dil--sokrates--2011',
+        # '', # jak se dostat na vs
+        'https://www.academia.cz/zaklady-spolecenskych-ved-i-priprava-pro-prijimaci-zkousky-na-vs--kotlan-igor--sokrates--2013',
+    ]
+
+    PathAca = {
+        'BookStore' : 'Academia',
+        'name'      : '/html/body/div/div[2]/div/div/div[1]/div/div[2]/div[2]/h1',
+        'url'       : '/html/body/div/div[2]/div/div/div[1]/div/div[2]/div[3]/div/div[1]/div[1]/div[1]/div[2]/p'
+    }
+    # /html/body/div/div[2]/div/div/div[1]/div/div[2]/div[3]/div/div[1]/div[1]/div[1]/div[2]/p - on stock
+    # /html/body/div/div[2]/div/div/div[1]/div/div[2]/div[3]/div/div[1]/div[1]/div[1]/div/p - out of stock
+
+    StockAca = 'SKLADEM'
+
 
 
 class bookstores:
@@ -590,6 +618,7 @@ class bookstores:
         'Knizniarcha'   : 'https://www.knizniarcha.cz/',
         'Books.cz'      : 'https://www.books.cz/',
         'Levne-knizky'  : 'https://www.levne-knizky.cz/',
+        'Academia'      : 'https://www.academia.cz',
     }
 
     iEmails = {
@@ -611,4 +640,27 @@ class bookstores:
         'Knizniarcha'   : 'obchod@knizniarcha.cz',
         'Books.cz'      : 'info@books.cz',
         'Levne-knizky'  : 'info@levne-knizky.cz',
+        'Academia'      : 'eshop@academia.cz',
     }
+
+    iLegend = [
+        'Dobrovsky',                
+        'Kosmas',               
+        'Luxor',                
+        'Martinus',                 
+        'Megaknihy',                
+        'ABZ',              
+        'Knihcentrum',              
+        'Knihy',                
+        'Booktook',                 
+        'Sevt',                 
+        'Dumknihy',                 
+        'Ladvi',                
+        'Ucebnice',                 
+        'Beletrie',                 
+        'Libristo',                 
+        'Knizniarcha',              
+        'Books.cz',             
+        'Levne-knizky',
+        'Academia',
+    ]

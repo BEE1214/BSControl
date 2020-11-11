@@ -14,7 +14,7 @@ from time import sleep
 from tologfile import tologfile
 
 class bscontrol:
-    """ Library with functions for controling books in stock on certain bookstores.
+    """ Library with functions for checking books in stock on certain bookstores.
 
     Dependencies:
         - python 3.8.5

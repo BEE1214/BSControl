@@ -7,11 +7,10 @@
 from BKControl import bscontrol
 from tologfile import tologfile
 from data.books import books
-from data.books import bookstores
-from datetime import time
+from interface import terminalinterface
 
 def main():
-    bot = bscontrol()
+    # bot = bscontrol()
     # iLoop = False
     
     # while True:
@@ -65,11 +64,15 @@ def main():
     # print('studijni predpoklady, lekarskou 1 a 2, anglictina, nemcina pravnicka 1 a 2 nemaji vubec v nabidce')
 
     # books.cz
-    bot.BSStock(books.UrlBooks, books.PathBooks, books.StockBooks)
+    # bot.BSStock(books.UrlBooks, books.PathBooks, books.StockBooks)
 
     # levne-knizky
-    bot.BSStock(books.UrlLK, books.PathLK, books.StockLK)
+    # bot.BSStock(books.UrlLK, books.PathLK, books.StockLK)
 
+    interface = terminalinterface()
+
+    interface.MainMenu()
+    
     return 0
 
 if __name__ == '__main__':
