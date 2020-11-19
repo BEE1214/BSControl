@@ -286,7 +286,7 @@ class terminalinterface():
         # Dobrovsky
         for i in range(1,19):
             iUrlst = f'Url_{i}'
-            iUrl = data.booksnum.books.iUrl_
+            iUrl = data.booksnum.books.Url_i
 
         bot.BSStock(data.books.books.UrlDobr, data.books.books.PathDobr, data.books.books.StockDobr)
         # 
