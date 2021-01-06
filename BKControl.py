@@ -12,6 +12,7 @@ from selenium.common.exceptions import NoSuchElementException
 from selenium.common.exceptions import TimeoutException
 from time import sleep
 from tologfile import tologfile
+import errors
 
 class bscontrol:
     """ Library with functions for checking books in stock on certain bookstores.
@@ -39,6 +40,8 @@ class bscontrol:
             self.driver = webdriver.Chrome(executable_path=self.driver_path)
             # self.driver.set_window_position(-1920,0)
             self.driver.set_window_size(1080, 1080)
+        else:
+            raise errors.UnknownOS
     
     def __del__(self):
         self.driver.close()

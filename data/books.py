@@ -228,8 +228,8 @@ class books:
 
     PathABZ = {
         'BookStore' : 'ABZ Knihy',
-        'name'      : '//span[contains(@itemprop, "name")]',
-        # 'name'  : '//*[@id="content_part"]/div[2]/article/div/h2/span[1]',
+        # 'name'      : '//span[contains(@itemprop, "name")]',
+        'name'  : '//*[@id="content_part"]/div[2]/article/div/h2/span[1]',
         'url'       : '//span[contains(@class, "dostupnost")]',
     }
 
@@ -325,7 +325,8 @@ class books:
     PathBT = {
         'BookStore' : 'BookTook',
         'name'      : '//*[@id="det-main"]/div[1]/h1/span',
-        'url'       : '//*[@id="det-buy"]/div/fieldset' 
+        # 'url'       : '//*[@id="det-buy"]/div/fieldset'
+        'url'       : '//*[@id="product-stock"]' 
     }
 
     StockBT = 'Skladem'
@@ -611,9 +612,9 @@ class bookstores:
         'Booktook'      : 'https://www.booktook.cz/',
         'Sevt'          : 'https://www.sevt.cz/',
         'Dumknihy'      : 'https://www.dumknihy.cz/',
-        'Ladvi'         : 'https://www.knihkupectvi-ladvi.cz/',
+        # 'Ladvi'         : 'https://www.knihkupectvi-ladvi.cz/',
         'Ucebnice'      : 'https://www.ucebnice.cz/',
-        'Beletrie'      : 'https://www.beletrie.eu/',
+        # 'Beletrie'      : 'https://www.beletrie.eu/',
         'Libristo'      : 'https://www.libristo.cz/',
         'Knizniarcha'   : 'https://www.knizniarcha.cz/',
         'Books.cz'      : 'https://www.books.cz/',
@@ -633,9 +634,9 @@ class bookstores:
         'Booktook'      : 'info@booktook.cz',
         'Sevt'          : 'kyncl@sevt.cz',
         'Dumknihy'      : 'eshop@kanzelsberger.cz',
-        'Ladvi'         : 'info@knihkupectvi-ladvi.cz',
+        # 'Ladvi'         : 'info@knihkupectvi-ladvi.cz',
         'Ucebnice'      : 'info@ucebnice.cz',
-        'Beletrie'      : 'obchod@beletrie.eu',
+        # 'Beletrie'      : 'obchod@beletrie.eu',
         'Libristo'      : 'info@libristo.cz',
         'Knizniarcha'   : 'obchod@knizniarcha.cz',
         'Books.cz'      : 'info@books.cz',
@@ -655,9 +656,9 @@ class bookstores:
         'Booktook',                 
         'Sevt',                 
         'Dumknihy',                 
-        'Ladvi',                
+        # 'Ladvi',                
         'Ucebnice',                 
-        'Beletrie',                 
+        # 'Beletrie',                 
         'Libristo',                 
         'Knizniarcha',              
         'Books.cz',             
