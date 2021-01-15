@@ -485,18 +485,19 @@ class books:
     PathLib = {
         'BookStore' : 'Libristo',
         'name'      : '//*[@id="app"]/section[1]/div/div[3]/div[1]/h1',
-        'ulr'       : '//div[contains(@class, "c-stock-avalibility")]',
+        'ulr'       : '//*[@id="app"]/section[1]/div/div[3]/div[3]/div[1]/div',
+        # 'ulr'       : '//div[contains(@class, "c-stock-avalibility")]',
     }
 
     StockLib = 'do 48 hodin'
 
 # ----------- Knizniarcha ------------ #
     UrlArch = [
-        # studijni predpoklady 1
+        'https://www.knizniarcha.cz/studijni-predpoklady-a-zaklady-logiky-1.dil',# studijni predpoklady 1
         'https://www.knizniarcha.cz/studijni-predpoklady-a-zaklady-logiky-2.-dil',
-        # '', # lekarska 1
+        'https://www.knizniarcha.cz/chcete-se-dostat-na-lekarskou-fakultu-', # lekarska 1
         'https://www.knizniarcha.cz/chcete-se-dostat-na-lekarskou-fakultu--2.-dil-biologie',
-        'https://www.knizniarcha.cz/studijni-predpoklady-a-zaklady-logiky-2.-dil',
+        'https://www.knizniarcha.cz/chcete-se-dostat-na-lekarskou-fakultu--3.dil',
         'https://www.knizniarcha.cz/chcete-se-dostat-na-lekarskou-fakultu--4.dil',
         'https://www.knizniarcha.cz/chcete-se-dostat-na-fakultu-socialnich-studii--ved--',
         # '', # anglictina
