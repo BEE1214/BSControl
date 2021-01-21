@@ -485,7 +485,8 @@ class books:
     PathLib = {
         'BookStore' : 'Libristo',
         'name'      : '//*[@id="app"]/section[1]/div/div[3]/div[1]/h1',
-        'ulr'       : '//*[@id="app"]/section[1]/div/div[3]/div[3]/div[1]/div',
+        # 'ulr'       : '//*[@id="app"]/section[1]/div/div[3]/div[3]/div[1]/div',
+        'ulr'       : '//*[@id="app"]/section[1]/div/div[3]/div[3]/div[1]/div/a/span',
         # 'ulr'       : '//div[contains(@class, "c-stock-avalibility")]',
     }
 

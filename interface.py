@@ -271,20 +271,33 @@ class terminalinterface():
         iBookStores = indibscontrol().BookStores()
         self.ClearMenu()
 
-        print('(Enter) Check all bookstores')
-        for i in range(len(data.books.bookstores.iLegend)):
-            print(f'({i + 1}) {data.books.bookstores.iLegend[i]}')
-        BookStore = input('} ')
+        nEnd = False
 
-        try:
-            if BookStore == '':
-                self.ClearMenu()
-                self.AllControlBookStores()
-            elif BookStore.isnumeric() and len(BookStore) <= 2 and int(BookStore) <= len(iBookStores) + 1:
-                self.ClearMenu()
-                iBookStores[int(BookStore) - 1]()
+        while not nEnd:
+            print('(Enter) Check all bookstores')
+            for i in range(len(data.books.bookstores.iLegend)):
+                print(f'({i + 1}) {data.books.bookstores.iLegend[i]}')
+            BookStore = input('} ')
+            if(BookStore == 'p'):
+                nEnd = True
+                return 0
             else:
-                raise errors.InputWrong
-        except errors.InputWrong:
-            print('Input is not number or has more then 1 digit')
+                nEnd = False
+
+            inBookStore = map(int, BookStore.split())
+
+            try:
+                if BookStore == '':
+                    self.ClearMenu()
+                    self.AllControlBookStores()
+                elif BookStore.isnumeric() and len(BookStore) <= 2 and int(BookStore) <= len(iBookStores) + 1:
+                    self.ClearMenu()
+                    iBookStores[int(BookStore) - 1]()
+                else:
+                    raise errors.InputWrong
+                nEnd = True
+            except errors.InputWrong:
+                print('Input is not number or has more then 1 digit')
+                
+
                 

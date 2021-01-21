@@ -16,7 +16,7 @@ class indibscontrol():
 
     def BookStores(self):
         """
-        docstring
+        Returns array of functions for for cycle.
         """
         return (
             [
