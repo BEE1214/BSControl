@@ -28,6 +28,8 @@ class terminalinterface():
                 system('clear')
             elif platform.system() == 'Windows':
                 system('cls')
+            else:
+                raise errors.UnknownOS
         except errors.UnknownOS:
             return (print("Unsupported Operating System!"))
 
@@ -70,7 +72,7 @@ class terminalinterface():
                     else:
                         raise errors.InputNotInInterval
                 except errors.InputNotInInterval:
-                    print('Entered wrong character.\n Try again!')
+                    print(f'Entered wrong character.\n Try again!')
                     ierr = True
                 self.ClearMenu()
 
@@ -79,9 +81,17 @@ class terminalinterface():
         """
         Clear menu
         """
-        for i in range(1,57):
-            stdout.write('\x1b[1A')
-            stdout.write('\x1b[2K')
+        try:
+            if platform.system() == 'Linux':
+                system('clear')
+            elif platform.system() == 'Windows':
+                system('cls')
+            else:
+                raise errors.UnknownOS
+        except errors.UnknownOS:
+            print('Unsupported operating system!')
+            # stdout.write('\x1b[1A')
+            # stdout.write('\x1b[2K')
 
             
     def Websites(self):
@@ -277,6 +287,7 @@ class terminalinterface():
             print('(Enter) Check all bookstores')
             for i in range(len(data.books.bookstores.iLegend)):
                 print(f'({i + 1}) {data.books.bookstores.iLegend[i]}')
+            print('(p) - previous menu')
             BookStore = input('} ')
             if(BookStore == 'p'):
                 nEnd = True
@@ -284,15 +295,23 @@ class terminalinterface():
             else:
                 nEnd = False
 
-            inBookStore = map(int, BookStore.split())
+            inputend = len(BookStore)
 
+            inBookStore = list(map(int, BookStore.split(' ')[:inputend]))
+            print(inBookStore)
             try:
                 if BookStore == '':
                     self.ClearMenu()
                     self.AllControlBookStores()
-                elif BookStore.isnumeric() and len(BookStore) <= 2 and int(BookStore) <= len(iBookStores) + 1:
+                # elif BookStore.isnumeric() and len(BookStore) <= 2 and int(BookStore) <= len(iBookStores) + 1:
+                elif BookStore.isnumeric() and len(BookStore) <=2 and len(inBookStore) == 1:
                     self.ClearMenu()
                     iBookStores[int(BookStore) - 1]()
+                elif len(inBookStore) > 1:
+                    self.ClearMenu()
+                    for i in inBookStore:
+                        iBookStores[i - 1]()
+                        
                 else:
                     raise errors.InputWrong
                 nEnd = True
