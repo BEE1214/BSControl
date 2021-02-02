@@ -38,7 +38,7 @@ class bscontrol:
             # self.options.binary_location = 'C:/Program Files (x86)/BraveSoftware/Brave-Browser/Application/brave.exe'
             self.driver_path = r'C:/Users/adamd/Apps/Chromdriver/chromedriver.exe'
             self.driver = webdriver.Chrome(executable_path=self.driver_path)
-            # self.driver.set_window_position(-1920,0)
+            self.driver.set_window_position(-1920,0)
             self.driver.set_window_size(1080, 1080)
         else:
             raise errors.UnknownOS
