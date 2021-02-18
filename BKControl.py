@@ -24,22 +24,25 @@ class bscontrol:
             - Brave browser
         On windows:
             - Google Chrome or Chromium
+            - add chromedriver to path variable(https://docs.microsoft.com/en-us/previous-versions/office/developer/sharepoint-2010/ee537574(v=office.14))
         - webdriver for actual version of Brave/Chrome browser
     """
     def __init__(self):
         if (system() == 'Linux'):
             self.options = Options()
             self.options.binary_location = '/usr/bin/brave'
+            self.options.add_argument('--headless')
             self.driver_path = '/usr/local/bin/chromedriver'
             self.driver = webdriver.Chrome(options = self.options,executable_path = self.driver_path)
-            # self.driver.set_window_size(1300, 1080)
+            # self.driver.set_window_size(1300, 1080) 
         elif (system() == 'Windows'):
-            # self.options = Options()
-            # self.options.binary_location = 'C:/Program Files (x86)/BraveSoftware/Brave-Browser/Application/brave.exe'
-            self.driver_path = r'C:/Users/adamd/Apps/Chromdriver/chromedriver.exe'
-            self.driver = webdriver.Chrome(executable_path=self.driver_path)
+            self.options = Options()
+            self.options.add_argument("--headless")
+            # self.options.binary_location = r'C:/Program Files (x86)/Google/Chrome/Application/chrome.exe'
+            # self.driver_path = r'C:/Users/adamd/Apps/Chromdriver/chromedriver.exe'
+            self.driver = webdriver.Chrome(chrome_options=self.options)
             # self.driver.set_window_position(-1920,0)
-            self.driver.set_window_size(1080, 1080)
+            # self.driver.set_window_size(1080, 1080)
         else:
             raise errors.UnknownOS
     

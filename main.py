@@ -8,20 +8,24 @@ from BKControl import bscontrol
 from tologfile import tologfile
 from data.books import books
 from interface import terminalinterface
-import PyQt5.QtWidgets as qtw
+from PyQt5 import QtWidgets, QtGui, QtCore
+from window_pyqt import Ui_MainWindow
+import sys
 from main_window import Ui_Window
 
 def main():
 
-    # interface = terminalinterface()
+    interface = terminalinterface()
 
-    # interface.MainMenu()
+    interface.MainMenu()
+
+    # app = QtWidgets.QApplication(sys.argv)
+    # MainWindow = QtWidgets.QMainWindow()
+    # ui = Ui_MainWindow()
+    # ui.setupUi(MainWindow)
+    # MainWindow.show()
+    # sys.exit(app.exec_())
     
-    App = qtw.QApplication([])
-    MainW = Ui_Window()
-    # MainW.show()
-    App.setStyle(qtw.QStyleFactory.create('Fusion'))
-    App.exec_()
     return 0
 
 if __name__ == '__main__':
